@@ -2130,7 +2130,7 @@ const MASTER_OF_FORUMS = () => {
         MESSAGE_TEXT.innerHTML = MESSAGE_TEXT.innerHTML
           .trim()
           .replace('<p>', '<p>\u{1F6AB}&nbsp;')
-          .replace('</p>', `</p>\n<p>\u{1F440}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/archive?tid=${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{5386}\u{53F2}\u{5FEB}\u{7167}</a>（<span style="color: var(--main-gray);">Hostloc 工具箱</span>）</p>`);
+          .replace('</p>', `</p>\n<p>\u{1F440}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/archive?tid=${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{5386}\u{53F2}\u{5FEB}\u{7167}</a>（<span style="color: var(--main-gray);">由&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">Hostloc 工具箱</span></a>&nbsp;提供技术支持</span>）</p>`);
       }
     } else if (PATHNAME.includes('/space-uid-') || PATHNAME.includes('/space-username-') || HREF.includes('/home.php?mod=space')) {
       const DIY_STYLE = document.getElementById('diy_style');

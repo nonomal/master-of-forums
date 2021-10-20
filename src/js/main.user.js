@@ -1123,7 +1123,7 @@ const MASTER_OF_FORUMS = () => {
   };
 
   MAIN.fn.fileUploadAppendToTextarea = (url) => {
-    const TEXTAREA_NODE = document.getElementById('e_textarea') || document.getElementById('postmessage') || document.getElementById('fastpostmessage') || document.getElementsByTagName('textarea')[0];
+    const TEXTAREA_NODE = document.getElementById('e_textarea') || document.getElementById('pmmessage') || document.getElementById('postmessage') || document.getElementById('fastpostmessage') || document.getElementById('replymessage') || document.getElementsByTagName('textarea')[0];
     if (TEXTAREA_NODE) {
       const content = TEXTAREA_NODE.value?.trim();
       TEXTAREA_NODE.value = content ? `${content}\n[img]${url}[/img]` : `[img]${url}[/img]`;

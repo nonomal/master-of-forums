@@ -1282,17 +1282,17 @@ const MASTER_OF_FORUMS = () => {
             }, message.delay);
             MAIN.actions?.supportPointToPoint(posts);
           } else {
-            MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: #036;">云端顶帖</span><span style="color: #060;">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+            MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: var(--main-blue);">云端顶帖</span><span style="color: var(--main-danger);">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
           }
         } else {
-          MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: #036;">云端顶帖</span><span style="color: #060;">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+          MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: var(--main-blue);">云端顶帖</span><span style="color: var(--main-danger);">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
         }
       },
       onerror: () => {
-        MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: #036;">云端顶帖</span><span style="color: #060;">\u{8BF7}\u{6C42}\u{9519}\u{8BEF}\u{FF01}</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+        MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: var(--main-blue);">云端顶帖</span><span style="color: var(--main-danger);">\u{8BF7}\u{6C42}\u{9519}\u{8BEF}\u{FF01}</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
       },
       ontimeout: () => {
-        MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: #036;">云端顶帖</span><span style="color: #060;">\u{8BF7}\u{6C42}\u{8D85}\u{65F6}\u{FF01}</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+        MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: var(--main-blue);">云端顶帖</span><span style="color: var(--main-danger);">\u{8BF7}\u{6C42}\u{8D85}\u{65F6}\u{FF01}</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
       },
     });
   };

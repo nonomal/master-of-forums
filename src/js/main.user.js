@@ -2130,7 +2130,7 @@ const MASTER_OF_FORUMS = () => {
           MESSAGE_TEXT.classList.remove('alert_error', 'alert_info');
           MESSAGE_TEXT.innerHTML = MESSAGE_TEXT.innerHTML
             .trim()
-            .replace('<p>', '<p>\u{1F6AB}&nbsp;')
+            .replace('<p>', '<p>\u{1F50A}&nbsp;')
             .replace('</p>', `</p>\n<p>\u{1F440}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/authority/${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{6743}\u{9650}\u{722A}\u{5DF4}</a>（<span style="color: var(--main-gray);">由&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">Hostloc 工具箱</span></a>&nbsp;提供技术支持</span>）</p>\n<p>\u{1F4F7}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/archive/${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{5386}\u{53F2}\u{5FEB}\u{7167}</a>（<span style="color: var(--main-gray);">由&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">Hostloc 工具箱</span></a>&nbsp;提供技术支持</span>）</p>`);
         }
       }, 100);

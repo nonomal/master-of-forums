@@ -162,8 +162,7 @@ img[src$="default-avatar-middle.webp"] {
 #postlist .sign,
 form textarea,
 .area textarea,
-#postform textarea,
-#messagetext {
+#postform textarea {
   font-family: var(--main-body-font-family);
   font-size: var(--main-body-font-size);
   font-weight: var(--main-body-font-weight);
@@ -673,6 +672,18 @@ img.master-badge.node-reappear {
   left: -2rem;
   z-index: 99;
   animation: drawer-guide-move 0.5s 4;
+}
+
+/* Message Text */
+#messagetext {
+  font-family: var(--main-body-font-family);
+  font-size: var(--main-body-font-size);
+  font-weight: var(--main-body-font-weight);
+  line-height: var(--main-body-line-height);
+  text-align: var(--main-body-text-align);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  animation: et 1s;
 }
 
 /* Char Half */

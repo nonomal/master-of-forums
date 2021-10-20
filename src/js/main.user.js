@@ -2123,6 +2123,15 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.ωωω_hostloc_com = () => {
     if (PATHNAME.includes('/thread-') || HREF.includes('/forum.php?mod=viewthread&tid=')) {
       MAIN.fn?.drawer();
+      const MESSAGE_TEXT = document.getElementById('messagetext');
+      if (MESSAGE_TEXT) {
+        MAIN.fn?.getThreadID();
+        MESSAGE_TEXT.classList.remove('alert_error', 'alert_info');
+        MESSAGE_TEXT.innerHTML = MESSAGE_TEXT.innerHTML
+          .trim()
+          .replace('<p>', '<p>\u{1F6AB}&nbsp;')
+          .replace('</p>', `</p>\n<p>\u{1F440}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/archive?tid=${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{5386}\u{53F2}\u{5FEB}\u{7167}</a>（<span style="color: var(--main-gray);">Hostloc 工具箱</span>）</p>`);
+      }
     } else if (PATHNAME.includes('/space-uid-') || PATHNAME.includes('/space-username-') || HREF.includes('/home.php?mod=space')) {
       const DIY_STYLE = document.getElementById('diy_style');
       if (DIY_STYLE) {

@@ -162,7 +162,8 @@ img[src$="default-avatar-middle.webp"] {
 #postlist .sign,
 form textarea,
 .area textarea,
-#postform textarea {
+#postform textarea,
+#messagetext {
   font-family: var(--main-body-font-family);
   font-size: var(--main-body-font-size);
   font-weight: var(--main-body-font-weight);

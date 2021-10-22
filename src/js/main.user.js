@@ -687,7 +687,7 @@ const MASTER_OF_FORUMS = () => {
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: 'https://imgurl.org/upload/aws_s3',
+      url: `https://${atob('aW1ndXJsLm9yZw==')}/upload/aws_s3`,
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
@@ -772,7 +772,7 @@ const MASTER_OF_FORUMS = () => {
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: 'https://www.hualigs.cn/api/upload',
+      url: `https://${atob('d3d3Lmh1YWxpZ3MuY24=')}/api/upload`,
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
@@ -849,7 +849,7 @@ const MASTER_OF_FORUMS = () => {
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://image.kieng.cn/upload.html?type=${NODE}`,
+      url: `https://${atob('aW1hZ2Uua2llbmcuY24=')}/upload.html?type=${NODE}`,
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
@@ -938,7 +938,7 @@ const MASTER_OF_FORUMS = () => {
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: 'https://api.imgur.com/3/image',
+      url: `https://${atob('YXBpLmltZ3VyLmNvbQ==')}/3/image`,
       headers: {
         Authorization: `Client-ID ${atob(IMGUR_CLIENT_ID[Math.floor(Math.random() * IMGUR_CLIENT_ID.length)]).split('').reverse().join('')}`,
       },
@@ -1030,7 +1030,7 @@ const MASTER_OF_FORUMS = () => {
 
       GM_xmlhttpRequest({
         method: 'POST',
-        url: 'https://upload.aichat.net/upload/single',
+        url: `https://${atob('dXBsb2FkLmFpY2hhdC5uZXQ=')}/upload/single`,
         data: fileData,
         timeout: 60 * 1000,
         onload: (response) => {
@@ -1243,7 +1243,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.data.nickname = MAIN.data?.nickname || document.querySelector('.vwmy a')?.innerHTML?.trim() || '';
     GM_xmlhttpRequest({
       method: 'POST',
-      url: 'https://api.369369.xyz/master-of-forums/actions/thumbs',
+      url: `https://${atob('YXBpLjM2OTM2OS54eXo=')}/master-of-forums/actions/thumbs`,
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'X-Requested-With': 'XMLHttpRequest',
@@ -1620,7 +1620,7 @@ const MASTER_OF_FORUMS = () => {
         event.target.classList.add('loading');
         GM_xmlhttpRequest({
           method: 'GET',
-          url: `https://master-of-forums.ids.workers.dev/?uuid=${GM_info.uuid || GM_info.script?.uuid}&hostname=${MAIN.data?.hostname}&data=postlist&sort=posttime`,
+          url: `https://${atob('bWFzdGVyLW9mLWZvcnVtcy5pZHMud29ya2Vycy5kZXY=')}/?uuid=${GM_info.uuid || GM_info.script?.uuid}&hostname=${MAIN.data?.hostname}&data=postlist&sort=posttime`,
           headers: {
             'Content-Type': 'application/json; charset=utf-8',
             'X-Requested-With': 'XMLHttpRequest',

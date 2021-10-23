@@ -1037,6 +1037,7 @@ const MASTER_OF_FORUMS = () => {
           if (response.readyState === 4 && response.status === 200) {
             const content = JSON.parse(response.responseText);
             if (content.code === 200 && content.url) {
+              content.url = content.url.replace(atob('c3RhdGljLmFpY2hhdC5uZXQ='), atob('YWljaGF0bmV3Lm9zcy1jbi1zaGFuZ2hhaS5hbGl5dW5jcy5jb20='));
               GM_setClipboard(content.url, 'text');
               GM_notification({
                 title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',

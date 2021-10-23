@@ -2459,12 +2459,13 @@ const MASTER_OF_FORUMS = () => {
         }
       }
       const CHAR = new Map([
-        ['\u{4E73}', 'Rǔ'],
-        ['\u{59E6}', 'Jiān'],
-        ['\u{5AD6}', 'Piáo'],
+        ['\u{6DEB}', 'Yín'],
         ['\u{5C0F}\u{59D0}\u{59D0}', 'XiǎoJiěJiě'],
         ['\u{5C0F}\u{59D0}', 'XiǎoJiě'],
-        ['\u{6DEB}', 'Yín'],
+        ['\u{5AD6}', 'Piáo'],
+        ['\u{59E6}', 'Jiān'],
+        ['\u{529E}\u{8BC1}', 'BànZhèng'],
+        ['\u{4E73}', 'Rǔ'],
       ]);
       for (const [key, value] of CHAR) {
         if (data.includes(key)) {

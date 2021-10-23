@@ -348,8 +348,8 @@
  * Author: admin
  * E-Mail: admin@369369.xyz
  *
- * GitHub (https://github.com/master-of-forums/master-of-forums)
- * Licensed under MPL (https://github.com/master-of-forums/master-of-forums/blob/main/LICENSE)
+ * Git repository (https://github.com/master-of-forums/master-of-forums)
+ * Licensed under MPL 2.0 (https://github.com/master-of-forums/master-of-forums/blob/main/LICENSE)
  */
 
 const MASTER_OF_FORUMS = () => {

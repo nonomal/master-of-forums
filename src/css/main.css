@@ -602,16 +602,9 @@ img.master-badge.node-reappear {
   -webkit-user-drag: none;
 }
 
-.discussion-list-item-content .content-title a:hover {
-  color: var(--main-blue);
-}
-
-.discussion-list-item-content .content-title a:focus {
-  color: var(--main-green);
-}
-
-.discussion-list-item-content .content-title a:active {
-  color: var(--main-yellow);
+.discussion-list-item-content .content-title a:hover,
+.discussion-list-item-content .content-title a:hover span {
+  color: var(--main-blue) !important;
 }
 
 .discussion-list-item-content .content-title a img {

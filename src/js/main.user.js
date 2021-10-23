@@ -2465,6 +2465,7 @@ const MASTER_OF_FORUMS = () => {
         ['\u{5AD6}', 'Piáo'],
         ['\u{59E6}', 'Jiān'],
         ['\u{529E}\u{8BC1}', 'BànZhèng'],
+        ['\u{4EE3}\u{8003}', 'DàiKǎo'],
         ['\u{4E73}', 'Rǔ'],
       ]);
       for (const [key, value] of CHAR) {

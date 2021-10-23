@@ -1470,7 +1470,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.removePatch = false;
     MAIN.can.addPatchTimestamp = Date.now();
     for (const i of document.getElementsByTagName('textarea')) {
-      const CONTENT = i.value.replaceAll(MAIN.data?.patch, '').replaceAll('[b][/b]', '').trim();
+      const CONTENT = i.value.replaceAll(MAIN.data?.patch, '').replaceAll('[u][/u]', '').trim();
       i.value = `${CONTENT}${MAIN.data?.patch}`;
       i.style.visibility = 'hidden';
       if (MAIN.data?.hostname === 'ωωω_hostloc_com') {
@@ -1496,7 +1496,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.removePatch = () => {
     for (const i of document.getElementsByTagName('textarea')) {
       if (i.value) {
-        i.value = i.value.replaceAll(MAIN.data?.patch, '').replaceAll('[img][/img]', '').replaceAll('[b][/b]', '').trim();
+        i.value = i.value.replaceAll(MAIN.data?.patch, '').replaceAll('[img][/img]', '').replaceAll('[u][/u]', '').trim();
       }
     }
   };
@@ -2245,6 +2245,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{4EBA}\u{4F53}',
         '\u{4ED6}\u{5988}\u{7684}',
         '\u{4EE3}\u{529E}',
+        '\u{4EE3}\u{8003}',
         '\u{4F0A}\u{65AF}\u{5170}\u{8FD0}\u{52A8}',
         '\u{4F5C}\u{7231}',
         '\u{4FC4}\u{56FD}',
@@ -2268,6 +2269,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{519B}\u{706B}',
         '\u{51CC}\u{8FB1}',
         '\u{5211}\u{8B66}',
+        '\u{529E}\u{8BC1}',
         '\u{52A8}\u{4E71}',
         '\u{5317}\u{4EAC}\u{5F53}\u{5C40}',
         '\u{5317}\u{4EAC}\u{653F}\u{6743}',
@@ -2299,6 +2301,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{5B59}\u{4E2D}\u{5C71}',
         '\u{5BC6}\u{7A74}',
         '\u{5C04}\u{7CBE}',
+        '\u{5C0F}\u{59D0}',
         '\u{5C0F}\u{7A74}',
         '\u{5C41}\u{773C}',
         '\u{5C41}\u{80A1}',
@@ -2379,6 +2382,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{72EC}\u{88C1}',
         '\u{730E}\u{67AA}',
         '\u{738B}\u{521A}',
+        '\u{7518}\u{6CB9}',
         '\u{7586}\u{72EC}',
         '\u{7A74}\u{53E3}',
         '\u{7CBE}\u{6DB2}',
@@ -2399,6 +2403,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{80E1}\u{9526}\u{6D9B}',
         '\u{80F8}\u{90E8}',
         '\u{81EA}\u{6170}',
+        '\u{81EA}\u{711A}',
         '\u{8272}\u{60C5}',
         '\u{8272}\u{6B32}',
         '\u{8273}\u{7167}\u{95E8}',
@@ -2415,6 +2420,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{8FD1}\u{4EB2}',
         '\u{8FF7}\u{5978}',
         '\u{8FF7}\u{836F}',
+        '\u{8FF7}\u{9B42}',
         '\u{9020}\u{53CD}',
         '\u{9093}\u{5C0F}\u{5E73}',
         '\u{90AA}\u{515A}',
@@ -2447,7 +2453,7 @@ const MASTER_OF_FORUMS = () => {
       ];
       for (const i of DATA_LIST) {
         if (data.includes(i)) {
-          data = data.replaceAll(i, i.split('').join('[b][/b]'));
+          data = data.replaceAll(i, i.split('').join('[u][/u]'));
           setTimeout(() => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
@@ -2459,16 +2465,10 @@ const MASTER_OF_FORUMS = () => {
         }
       }
       const CHAR = new Map([
-        ['\u{8FF7}\u{9B42}', 'MíHún'],
-        ['\u{81EA}\u{711A}', 'ZìFén'],
-        ['\u{6DEB}', 'Yín'],
-        ['\u{5C0F}\u{59D0}\u{59D0}', 'XiǎoJiěJiě'],
-        ['\u{5C0F}\u{59D0}', 'XiǎoJiě'],
-        ['\u{5AD6}', 'Piáo'],
-        ['\u{59E6}', 'Jiān'],
-        ['\u{529E}\u{8BC1}', 'BànZhèng'],
-        ['\u{4EE3}\u{8003}', 'DàiKǎo'],
         ['\u{4E73}', 'Rǔ'],
+        ['\u{59E6}', 'Jiān'],
+        ['\u{5AD6}', 'Piáo'],
+        ['\u{6DEB}', 'Yín'],
       ]);
       for (const [key, value] of CHAR) {
         if (data.includes(key)) {

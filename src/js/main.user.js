@@ -2459,6 +2459,7 @@ const MASTER_OF_FORUMS = () => {
         }
       }
       const CHAR = new Map([
+        ['\u{8FF7}\u{9B42}', 'MíHún'],
         ['\u{81EA}\u{711A}', 'ZìFén'],
         ['\u{6DEB}', 'Yín'],
         ['\u{5C0F}\u{59D0}\u{59D0}', 'XiǎoJiěJiě'],

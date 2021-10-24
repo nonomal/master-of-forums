@@ -2192,14 +2192,6 @@ const MASTER_OF_FORUMS = () => {
       }
     });
 
-    // Form
-    MONKEY_MENU.name = '\u{1F993} \u{4E3B}\u{673A}\u{8BBA}\u{575B} \u{1F344} \u{62A5}\u{544A}\u{8BBA}\u{575B}\u{8FDD}\u{7981}\u{8BCD}\u{7ED9}\u{8BBA}\u{575B}\u{5927}\u{5E08}';
-    GM_registerMenuCommand(MONKEY_MENU.name, () => {
-      GM_openInTab(`https://${atob('d3d3Lm1pa2Vjcm0uY29t')}/4EblkxT`, {
-        active: true,
-      });
-    });
-
     // Switch to Domains
     const DOMAIN_LIST = [
       'hostloc.com',
@@ -2562,6 +2554,14 @@ const MASTER_OF_FORUMS = () => {
   if (typeof MAIN.fn[MAIN.data?.hostname] === 'function') {
     MAIN.fn[MAIN.data?.hostname]();
   }
+
+  // Questionnaire
+  MONKEY_MENU.name = '\u{1F4D6} \u{8BBA}\u{575B}\u{5927}\u{5E08}\u{7528}\u{6237}\u{95EE}\u{5377}';
+  GM_registerMenuCommand(MONKEY_MENU.name, () => {
+    GM_openInTab(`https://${atob('d2oucXEuY29t')}/s2/9209898/b3e1`, {
+      active: true,
+    });
+  });
 
   // Show hidden posts
   for (let i = 0; i <= 1; i++) {

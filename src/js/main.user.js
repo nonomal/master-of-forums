@@ -377,7 +377,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211020,
+    version: 20211025,
     window: {},
   };
 
@@ -2018,7 +2018,7 @@ const MASTER_OF_FORUMS = () => {
               },
             });
             // Audio Notice
-            MAIN.fn?.audio();
+            // MAIN.fn?.audio();
 
             if (content.includes('<a href="/notifications" class="fade">') && content.includes('<a href="/notifications" class="fade">0') === false) {
               const message = `\u{1F50A}\u{60A8}\u{6709} ${content.match(/<a href="\/notifications" class="fade">(.+?)</)[1]}`;
@@ -2087,7 +2087,7 @@ const MASTER_OF_FORUMS = () => {
             timeout: 60 * 1000,
           });
           // Audio Notice
-          MAIN.fn?.audio();
+          // MAIN.fn?.audio();
         } catch (error) {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
@@ -2113,7 +2113,7 @@ const MASTER_OF_FORUMS = () => {
           timeout: 9 * 1000,
         });
         // Audio Notice
-        MAIN.fn?.audio();
+        // MAIN.fn?.audio();
       }
     });
   };
@@ -2187,7 +2187,7 @@ const MASTER_OF_FORUMS = () => {
             },
           });
           // Audio Notice
-          MAIN.fn?.audio();
+          // MAIN.fn?.audio();
         }, 15 * 1000);
       }
     });

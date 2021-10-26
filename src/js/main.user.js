@@ -2202,7 +2202,7 @@ const MASTER_OF_FORUMS = () => {
     ];
     for (let i = 0; i < DOMAIN_LIST.length; i++) {
       const DOMAIN = DOMAIN_LIST[i];
-      MONKEY_MENU.name = `\u{1F500} Switch No.${i + 1} ${HOSTNAME === DOMAIN ? '\u{1F31D}' : '\u{1F31A}'} ${DOMAIN}${DOMAIN === 'www.loc.pp.ua' ? '（第三方）' : ''}`;
+      MONKEY_MENU.name = `\u{1F500} Switch No.${i + 1} ${HOSTNAME === DOMAIN ? '\u{1F31D}' : '\u{1F31A}'} ${DOMAIN}${DOMAIN === 'www.loc.pp.ua' ? '（\u{1F534}非官方）' : ''}`;
       GM_registerMenuCommand(MONKEY_MENU.name, () => {
         document.body.style.transition = 'opacity 1s ease-out';
         document.body.style.opacity = 0;

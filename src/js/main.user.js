@@ -2198,6 +2198,7 @@ const MASTER_OF_FORUMS = () => {
       'www.hostloc.com',
       '91ai.net',
       'www.91ai.net',
+      'www.loc.pp.ua',
     ];
     for (let i = 0; i < DOMAIN_LIST.length; i++) {
       const DOMAIN = DOMAIN_LIST[i];
@@ -2545,7 +2546,7 @@ const MASTER_OF_FORUMS = () => {
       MAIN.data.hostname = 'v2ex.com';
       break;
 
-    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net'].includes(HOSTNAME):
+    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net', 'www.loc.pp.ua'].includes(HOSTNAME):
       MAIN.data.hostname = 'hostloc.com';
       break;
 

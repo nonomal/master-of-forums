@@ -1845,7 +1845,7 @@ const MASTER_OF_FORUMS = () => {
         .replaceAll('"http://www.rmdown.com/', '"//www.rmdown.com/')
         .trim();
 
-      MAIN.data.content = MAIN.data?.content?.replace(/<img (.+?)>/g, '<figure class="data-container"><img $1 loading="lazy" referrerpolicy="no-referrer"><span class="data-tip data-src">\u{1F340}</span><span class="data-tip data-href">\u{1F341}</span></figure>');
+      MAIN.data.content = MAIN.data?.content?.replace(/<img (.+?)>/g, '<figure class="data-container"><img $1 loading="lazy" referrerpolicy="no-referrer"><span class="data-tip data-src">\u{1F311}</span><span class="data-tip data-href">\u{1F517}</span></figure>');
     };
 
     // Anti-anti-anti-advertising
@@ -1877,13 +1877,13 @@ const MASTER_OF_FORUMS = () => {
       for (const i of document.querySelectorAll('.data-container img')) {
         if (/\/\/thumbs.+_t\.(avif|gif|jpe?g|png|svg|webp)$/.test(i.src)) {
           i.dataset.src = i.src.replace('//thumbs', '//images').replace(/_t\.(avif|gif|jpe?g|png|svg|webp)$/, '_o.$1');
-          i.parentNode.getElementsByClassName('data-src')[0].innerHTML = '\u{1F33B}';
+          i.parentNode.getElementsByClassName('data-src')[0].innerHTML = '\u{1F315}';
         } else if (/\.th\.(avif|gif|jpe?g|png|svg|webp)$/.test(i.src)) {
           i.dataset.src = i.src.replace(/\.th\.(avif|gif|jpe?g|png|svg|webp)$/, '.$1');
-          i.parentNode.getElementsByClassName('data-src')[0].innerHTML = '\u{1F33B}';
+          i.parentNode.getElementsByClassName('data-src')[0].innerHTML = '\u{1F315}';
         } else if (/\/\/[0-9a-zA-Z]+?\.netcdn\.space\/.+?-[0-9]+?\.(avif|gif|jpe?g|png|svg|webp)$/.test(i.src)) {
           i.dataset.src = i.src.replace(/\/\/([0-9a-zA-Z]+?)\.netcdn\.space\/(.+?)-([0-9]+?)\.(avif|gif|jpe?g|png|svg|webp)$/, '//$1.netcdn.space/$2$1-$3.$4');
-          i.parentNode.getElementsByClassName('data-src')[0].innerHTML = '\u{1F33B}';
+          i.parentNode.getElementsByClassName('data-src')[0].innerHTML = '\u{1F315}';
         }
       }
       if (document.getElementsByClassName('html-data-article-content')[0]) {

@@ -1,4 +1,4 @@
-# 论坛大师（Master of Forums）
+# 论坛大师
 [![Master of Forums - GitHub](https://img.shields.io/badge/论坛大师-GitHub-blue?style=flat-square&logo=GitHub)](https://github.com/master-of-forums/master-of-forums)
 [![Master of Forums - GitHub](https://img.shields.io/badge/论坛大师-GitLab-blue?style=flat-square&logo=GitLab)](https://gitlab.com/master-of-forums/master-of-forums)
 [![Mozilla Public License Version 2.0](https://img.shields.io/badge/License-MPL%202.0-blue?style=flat-square&logo=Open%20Source%20Initiative)](https://www.mozilla.org/MPL/2.0/)

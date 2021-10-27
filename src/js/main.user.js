@@ -2198,11 +2198,10 @@ const MASTER_OF_FORUMS = () => {
       'www.hostloc.com',
       '91ai.net',
       'www.91ai.net',
-      'www.loc.pp.ua',
     ];
     for (let i = 0; i < DOMAIN_LIST.length; i++) {
       const DOMAIN = DOMAIN_LIST[i];
-      MONKEY_MENU.name = `\u{1F500} Switch No.${i + 1} ${HOSTNAME === DOMAIN ? '\u{1F31D}' : '\u{1F31A}'} ${DOMAIN}${DOMAIN === 'www.loc.pp.ua' ? '（非官方）' : ''}`;
+      MONKEY_MENU.name = `\u{1F500} Switch No.${i + 1} ${HOSTNAME === DOMAIN ? '\u{1F31D}' : '\u{1F31A}'} ${DOMAIN}`;
       GM_registerMenuCommand(MONKEY_MENU.name, () => {
         document.body.style.transition = 'opacity 1s ease-out';
         document.body.style.opacity = 0;
@@ -2546,7 +2545,7 @@ const MASTER_OF_FORUMS = () => {
       MAIN.data.hostname = 'v2ex.com';
       break;
 
-    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net', 'www.loc.pp.ua'].includes(HOSTNAME):
+    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net'].includes(HOSTNAME):
       MAIN.data.hostname = 'hostloc.com';
       break;
 

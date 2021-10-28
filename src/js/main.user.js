@@ -1478,7 +1478,7 @@ const MASTER_OF_FORUMS = () => {
         i.style.visibility = 'visible';
       }, 999);
     }
-    if (MAIN.data?.hostname === 'ωωω_hostloc_com' && SEARCH_PARAMS.get('action') === 'newthread') {
+    if (MAIN.data?.hostname === 'ωωω_hostloc_com' && SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
       const CHAR = new Map([
         ['\u{4E73}', 'Rǔ'],
         ['\u{59E6}', 'Jiān'],

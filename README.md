@@ -29,5 +29,5 @@ Get script from GitLab | [![Get script from GitLab](https://img.shields.io/badge
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ❌ | Latest ✔ | Latest ✔
 
 ### 界面展示
-[![功能菜单](https://i.imgur.com/Y2FC9G4.png)](../..)
+[![功能菜单](https://i.imgur.com/DF8mzXR.png)](../..)
 [![云端点赞](https://i.imgur.com/GVHTEZi.png)](../..)

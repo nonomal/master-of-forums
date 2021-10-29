@@ -1936,7 +1936,8 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.ωωω_52pojie_cn = () => {
     // Remove ads
     GM_addStyle(`
-    #toptb .wp a[href$=".html"],
+    #toptb .wp a[href^="http"],
+    #toptb .wp a[href$="html"],
     #nv img[src$="/scan.gif"],
     #ct .bm.bml.pbn .bm_c.cl.pbn,
     #threadlisttableid [id^="stickthread_"],

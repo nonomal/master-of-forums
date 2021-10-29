@@ -2138,6 +2138,10 @@ const MASTER_OF_FORUMS = () => {
             .replace('<p>', '<p>\u{1F50A}&nbsp;')
             .replace('</p>', `</p>\n<p>\u{1F440}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/authority/${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{6743}\u{9650}\u{722A}\u{5DF4}</a>（<span style="color: var(--main-gray);">由&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">Hostloc 工具箱</span></a>&nbsp;提供技术支持</span>）</p>\n<p>\u{1F4F7}&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/#/archive/${MAIN.data?.thread}" rel="external nofollow noopener" target="_blank">\u{5386}\u{53F2}\u{5FEB}\u{7167}</a>（<span style="color: var(--main-gray);">由&nbsp;<a href="//${atob('aG9zdGxvYy4xMjM0MjM0Lnh5eg==')}/" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">Hostloc 工具箱</span></a>&nbsp;提供技术支持</span>）</p>`);
         }
+        if (document.getElementById('messagelogin') && localStorage.getItem('invite') !== 'true' && Math.random() < 0.01) {
+          localStorage.setItem('invite', 'true');
+          MESSAGE_TEXT.innerHTML += '\n<p style="padding-top: 1rem;"><span class="main-flash">\u{1F642}</span>&nbsp;<a href="//github.com/master-of-forums/master-of-forums/search?q=E-Mail" rel="external nofollow noopener" target="_blank">\u{7ED9}\u{6211}\u{6765}\u{4FE1}</a>\u{6CE8}\u{660E}\u{8BBA}\u{575B}\u{548C}\u{8BC9}\u{6C42}，\u{4F60}\u{5C06}\u{4F1A}\u{5728}<span style="color: var(--main-red);">\u{0032}\u{0034}\u{5C0F}\u{65F6}</span>\u{5185}\u{6536}\u{5230}\u{8BBA}\u{575B}<span style="color: var(--main-green);">\u{9080}\u{8BF7}\u{7801}</span>\u{FF01}（<a href="https://github.com/master-of-forums/master-of-forums" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">\u{8BBA}\u{575B}\u{5927}\u{5E08}</span></a>）</p>';
+        }
       }, 100);
     } else if (PATHNAME.includes('/space-uid-') || PATHNAME.includes('/space-username-') || HREF.includes('/home.php?mod=space')) {
       const DIY_STYLE = document.getElementById('diy_style');

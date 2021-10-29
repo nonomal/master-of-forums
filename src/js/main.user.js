@@ -369,6 +369,7 @@ const MASTER_OF_FORUMS = () => {
       nodeTimestamp: Date.now(),
       unixTimestamp: Math.floor(Date.now() / 1000),
     },
+    domains: {},
     fn: {
       print(...args) {
         // eslint-disable-next-line no-console
@@ -1703,7 +1704,7 @@ const MASTER_OF_FORUMS = () => {
     }
   };
 
-  MAIN.fn.ωωω_t66y_com = () => {
+  MAIN.domains.ωωω_t66y_com = () => {
     // Remove ads
     GM_addStyle(`
     #cate_thread font,
@@ -1933,7 +1934,7 @@ const MASTER_OF_FORUMS = () => {
     }
   };
 
-  MAIN.fn.ωωω_52pojie_cn = () => {
+  MAIN.domains.ωωω_52pojie_cn = () => {
     // Remove ads
     GM_addStyle(`
     #toptb .wp a[href^="http"],
@@ -1977,7 +1978,7 @@ const MASTER_OF_FORUMS = () => {
     }
   };
 
-  MAIN.fn.ωωω_fobshanghai_com = () => {
+  MAIN.domains.ωωω_fobshanghai_com = () => {
     // Remove ads
     GM_addStyle(`
     .mainheader .logo .right,
@@ -1999,7 +2000,7 @@ const MASTER_OF_FORUMS = () => {
     `);
   };
 
-  MAIN.fn.ωωω_v2ex_com = () => {
+  MAIN.domains.ωωω_v2ex_com = () => {
     // Remove ads
     GM_addStyle(`
     .sidebar_compliance,
@@ -2134,7 +2135,7 @@ const MASTER_OF_FORUMS = () => {
     });
   };
 
-  MAIN.fn.ωωω_hostloc_com = () => {
+  MAIN.domains.ωωω_hostloc_com = () => {
     if (PATHNAME.includes('/thread-') || HREF.includes('/forum.php?mod=viewthread&tid=')) {
       MAIN.fn?.drawer();
       setTimeout(() => {
@@ -2639,7 +2640,7 @@ const MASTER_OF_FORUMS = () => {
     };
   };
 
-  MAIN.fn.ωωω_pcbeta_com = () => {
+  MAIN.domains.ωωω_pcbeta_com = () => {
     // Disable functions
     if (typeof alert === 'function') {
       unsafeWindow.alert = () => {};
@@ -2691,8 +2692,8 @@ const MASTER_OF_FORUMS = () => {
       break;
   }
   MAIN.data.hostname = `ωωω_${MAIN.data.hostname.replace(/\./g, '_')}`;
-  if (typeof MAIN.fn[MAIN.data?.hostname] === 'function') {
-    MAIN.fn[MAIN.data?.hostname]();
+  if (typeof MAIN.domains[MAIN.data?.hostname] === 'function') {
+    MAIN.domains[MAIN.data?.hostname]();
   }
 
   // Questionnaire

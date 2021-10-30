@@ -144,8 +144,6 @@
 // @connect           coindesk.com
 // @connect           coingecko.com
 // @connect           coinmarketcap.com
-// @connect           curve.com
-// @connect           curve.fi
 // @connect           debug.com
 // @connect           dianping.com
 // @connect           digitalocean.com
@@ -225,6 +223,18 @@
 // @connect           mdex.me
 // @connect           meituan.com
 // @connect           meizu.com
+// @connect           meta.app
+// @connect           meta.blog
+// @connect           meta.com
+// @connect           meta.date
+// @connect           meta.dev
+// @connect           meta.fail
+// @connect           meta.info
+// @connect           meta.io
+// @connect           meta.news
+// @connect           meta.site
+// @connect           meta.tech
+// @connect           meta.tv
 // @connect           metamask.com
 // @connect           metamask.io
 // @connect           mi.com
@@ -239,7 +249,9 @@
 // @connect           netflix.com
 // @connect           nextdns.com
 // @connect           nextdns.io
+// @connect           notion.app
 // @connect           notion.com
+// @connect           notion.dev
 // @connect           notion.io
 // @connect           notion.site
 // @connect           notion.so

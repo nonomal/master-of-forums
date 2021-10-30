@@ -1014,7 +1014,7 @@ const MASTER_OF_FORUMS = () => {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
         // eslint-disable-next-line no-undef
-        text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{8282}\u{70B9}）\n文件名字：${FILE.name}\n文件大小：${filesize(FILE.size, { base: 2 })}`,
+        text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{8282}\u{70B9}）\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${FILE.name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
         image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
         timeout: 4 * 1000,
       });

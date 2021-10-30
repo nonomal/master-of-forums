@@ -872,6 +872,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToCN = (FILE, NODE = 'qq') => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+      // eslint-disable-next-line no-undef
       text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,

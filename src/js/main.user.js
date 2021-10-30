@@ -148,6 +148,7 @@
 // @connect           coindesk.com
 // @connect           coingecko.com
 // @connect           coinmarketcap.com
+// @connect           cryptopay.me
 // @connect           curve.com
 // @connect           datausa.io
 // @connect           debug.com

@@ -318,6 +318,7 @@
 // @connect           zhihu.com
 // @connect           zoom.app
 // @connect           zoom.com
+// @connect           zoom.dev
 // @connect           zoom.io
 // @connect           zoom.us
 // @run-at            document-start

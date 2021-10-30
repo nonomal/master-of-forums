@@ -872,7 +872,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToCN = (FILE, NODE = 'qq') => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}）',
+      text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
@@ -892,7 +892,7 @@ const MASTER_OF_FORUMS = () => {
             GM_setClipboard(content.data?.url, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{6587}\u{4EF6}\u{540D}\u{5B57}：${content.data?.name}`,
+              text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
               image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {
@@ -949,7 +949,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToUS = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{7F8E}\u{56FD}\u{7EBF}\u{8DEF}）',
+      text: '\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{7F8E}\u{56FD}\u{7EBF}\u{8DEF}）',
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
@@ -985,7 +985,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               // eslint-disable-next-line no-undef
-              text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{6587}\u{4EF6}\u{7C7B}\u{578B}：${content.data?.type}\n\u{1F4D6}\u{6587}\u{4EF6}\u{5C3A}\u{5BF8}：${content.data?.width} × ${content.data?.height} Pixel\n\u{1F4D6}\u{6587}\u{4EF6}\u{4F53}\u{79EF}：${filesize(content.data?.size, { base: 2 })}`,
+              text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{56FE}\u{7247}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{56FE}\u{7247}\u{7C7B}\u{578B}：${content.data?.type}\n\u{1F4D6}\u{56FE}\u{7247}\u{5C3A}\u{5BF8}：${content.data?.width} × ${content.data?.height} Pixel\n\u{1F4D6}\u{56FE}\u{7247}\u{4F53}\u{79EF}：${filesize(content.data?.size, { base: 2 })}`,
               image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {

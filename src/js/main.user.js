@@ -104,6 +104,7 @@
 // @connect           360.com
 // @connect           369369.xyz
 // @connect           58.com
+// @connect           agify.io
 // @connect           aichat.com
 // @connect           aichat.net
 // @connect           alexa.com
@@ -121,6 +122,7 @@
 // @connect           apiopen.top
 // @connect           apple.com
 // @connect           appspot.com
+// @connect           archive.org
 // @connect           asciinema.com
 // @connect           asciinema.org
 // @connect           baidu.com
@@ -133,8 +135,10 @@
 // @connect           blockchain.com
 // @connect           blogger.com
 // @connect           blogspot.comg
+// @connect           boredapi.com
 // @connect           buymeacoffee.com
 // @connect           caniuse.com
+// @connect           catfact.ninja
 // @connect           cdnjs.com
 // @connect           chromium.com
 // @connect           chromium.org
@@ -144,6 +148,7 @@
 // @connect           coindesk.com
 // @connect           coingecko.com
 // @connect           coinmarketcap.com
+// @connect           datausa.io
 // @connect           debug.com
 // @connect           dianping.com
 // @connect           digitalocean.com
@@ -153,6 +158,7 @@
 // @connect           dns.com
 // @connect           docker.com
 // @connect           docker.io
+// @connect           dog.ceo
 // @connect           douban.com
 // @connect           epicgames.com
 // @connect           esm.run
@@ -169,6 +175,8 @@
 // @connect           firebaseio.com
 // @connect           fitbit.com
 // @connect           flickr.com
+// @connect           funtranslations.com
+// @connect           genderize.io
 // @connect           gitbook.com
 // @connect           gitbook.io
 // @connect           github.app
@@ -190,6 +198,7 @@
 // @connect           gugudata.com
 // @connect           gv.com
 // @connect           hereapi.com
+// @connect           hipolabs.com
 // @connect           httpbin.org
 // @connect           hualigs.cn
 // @connect           huawei.com
@@ -201,6 +210,8 @@
 // @connect           imgurl.org
 // @connect           ipfs.com
 // @connect           ipfs.io
+// @connect           ipify.org
+// @connect           ipinfo.io
 // @connect           jd.com
 // @connect           jin10.com
 // @connect           js.org
@@ -246,6 +257,7 @@
 // @connect           mubu.com
 // @connect           myqcloud.com
 // @connect           namesilo.com
+// @connect           nationalize.io
 // @connect           netflix.com
 // @connect           nextdns.com
 // @connect           nextdns.io
@@ -263,11 +275,13 @@
 // @connect           pastebin.com
 // @connect           paypal.com
 // @connect           pinduoduo.com
+// @connect           publicapis.org
 // @connect           qiniu.com
 // @connect           qiyi.com
 // @connect           qq.com
 // @connect           quran.com
 // @connect           random.org
+// @connect           randomuser.me
 // @connect           redis.com
 // @connect           redis.io
 // @connect           redislabs.com

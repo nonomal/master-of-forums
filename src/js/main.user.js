@@ -104,6 +104,7 @@
 // @connect           360.com
 // @connect           369369.xyz
 // @connect           58.com
+// @connect           ac.cn
 // @connect           agify.io
 // @connect           aichat.com
 // @connect           aichat.net
@@ -284,6 +285,7 @@
 // @connect           qiniu.com
 // @connect           qiyi.com
 // @connect           qq.com
+// @connect           querydata.org
 // @connect           quran.com
 // @connect           radar.io
 // @connect           random.org

@@ -345,6 +345,7 @@
 // @connect           vercel.app
 // @connect           vercel.com
 // @connect           vk.com
+// @connect           vscode.dev
 // @connect           web.dev
 // @connect           webhose.io
 // @connect           wechat.com
@@ -1528,6 +1529,7 @@ const MASTER_OF_FORUMS = () => {
     if (MAIN.data?.hostname === 'ωωω_hostloc_com' && SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
       const CHAR = new Map([
         ['\u{4E73}', 'Rǔ'],
+        ['\u{5907}\u{6848}', 'Bèiàn'],
         ['\u{59E6}', 'Jiān'],
         ['\u{5AD6}', 'Piáo'],
         ['\u{6DEB}', 'Yín'],

@@ -137,6 +137,7 @@
 // @connect           blogger.com
 // @connect           blogspot.comg
 // @connect           boredapi.com
+// @connect           box.com
 // @connect           buymeacoffee.com
 // @connect           caniuse.com
 // @connect           catfact.ninja
@@ -165,10 +166,12 @@
 // @connect           docker.io
 // @connect           dog.ceo
 // @connect           douban.com
+// @connect           dropbox.com
 // @connect           epicgames.com
 // @connect           esm.run
 // @connect           eu.org
 // @connect           facebook.com
+// @connect           fastmail.com
 // @connect           fbi.gov
 // @connect           feishu.cn
 // @connect           feishu.com
@@ -281,6 +284,7 @@
 // @connect           paypal.com
 // @connect           peopledatalabs.com
 // @connect           pinduoduo.com
+// @connect           protonmail.com
 // @connect           publicapis.org
 // @connect           qiniu.com
 // @connect           qiyi.com
@@ -332,6 +336,7 @@
 // @connect           travis.org
 // @connect           tuchong.com
 // @connect           tumblr.com
+// @connect           tutanota.com
 // @connect           twitter.com
 // @connect           typeform.com
 // @connect           uniswap.org

@@ -362,6 +362,7 @@
 // @run-at            document-start
 // @require           https://cdn.jsdelivr.net/npm/filesize@8/lib/filesize.es6.min.js
 // @resource          MainCSS https://github.com/master-of-forums/master-of-forums/raw/main/src/css/main.css
+// @resource          MainICON https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp
 // @grant             GM_info
 // @grant             GM_getValue
 // @grant             GM_setValue
@@ -483,14 +484,14 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       } else {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       }
@@ -531,14 +532,14 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       } else {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       }
@@ -591,14 +592,14 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       } else {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       }
@@ -710,7 +711,7 @@ const MASTER_OF_FORUMS = () => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
       text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（Amazon Simple Storage Service）',
-      image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+      image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
 
@@ -730,7 +731,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {
                 GM_openInTab(content.url, {
@@ -744,7 +745,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
           }
@@ -752,7 +753,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
           });
         }
@@ -761,7 +762,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -769,7 +770,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -780,7 +781,7 @@ const MASTER_OF_FORUMS = () => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
       text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}）',
-      image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+      image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
 
@@ -815,7 +816,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {
                 GM_openInTab(content.data?.url?.bilibili, {
@@ -829,14 +830,14 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{1F50A}${content.msg}`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
             });
           } else {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
           }
@@ -844,7 +845,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
           });
         }
@@ -853,7 +854,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -861,7 +862,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -872,7 +873,7 @@ const MASTER_OF_FORUMS = () => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
       text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}）',
-      image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+      image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
 
@@ -892,7 +893,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{6587}\u{4EF6}\u{540D}\u{5B57}：${content.data?.name}`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {
                 GM_openInTab(content.data?.url, {
@@ -906,14 +907,14 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{1F50A}${content.msg}`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
             });
           } else {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
           }
@@ -921,7 +922,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
           });
         }
@@ -930,7 +931,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -938,7 +939,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -949,7 +950,7 @@ const MASTER_OF_FORUMS = () => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
       text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{7F8E}\u{56FD}\u{7EBF}\u{8DEF}）',
-      image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+      image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
 
@@ -985,7 +986,7 @@ const MASTER_OF_FORUMS = () => {
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               // eslint-disable-next-line no-undef
               text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{6587}\u{4EF6}\u{7C7B}\u{578B}：${content.data?.type}\n\u{1F4D6}\u{6587}\u{4EF6}\u{5C3A}\u{5BF8}：${content.data?.width} × ${content.data?.height} Pixel\n\u{1F4D6}\u{6587}\u{4EF6}\u{4F53}\u{79EF}：${filesize(content.data?.size, { base: 2 })}`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {
                 GM_openInTab(content.data?.link, {
@@ -1003,14 +1004,14 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: message,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
             });
           } catch (error) {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}\n\u{1F4E1}\u{56E0}\u{4E3A}\u{7F51}\u{7EDC}\u{FF1F}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
           }
@@ -1020,7 +1021,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -1028,7 +1029,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
       },
@@ -1040,14 +1041,14 @@ const MASTER_OF_FORUMS = () => {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
         text: '\u{274C}\u{6587}\u{4EF6}\u{5927}\u{5C0F}\u{8D85}\u{51FA}\u{9650}\u{5236}（\u{6700}\u{5927}\u{652F}\u{6301} 30 MiB）',
-        image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+        image: GM_getResourceURL('MainICON'),
         timeout: 4 * 1000,
       });
     } else if (/\.(text|md|html|css|js|json|log|lock|ico|exe|7z|webm)$/i.test(FILE.name)) {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
         text: `\u{274C}\u{4E0D}\u{652F}\u{6301}\u{7684}\u{6587}\u{4EF6}\u{683C}\u{5F0F}（${FILE.name}）`,
-        image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+        image: GM_getResourceURL('MainICON'),
         timeout: 4 * 1000,
       });
     } else {
@@ -1055,7 +1056,7 @@ const MASTER_OF_FORUMS = () => {
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
         // eslint-disable-next-line no-undef
         text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{8282}\u{70B9}）\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${FILE.name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
-        image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+        image: GM_getResourceURL('MainICON'),
         timeout: 4 * 1000,
       });
 
@@ -1076,7 +1077,7 @@ const MASTER_OF_FORUMS = () => {
               GM_notification({
                 title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
                 text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
-                image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+                image: GM_getResourceURL('MainICON'),
                 timeout: 9 * 1000,
                 onclick: () => {
                   GM_openInTab(content.url, {
@@ -1092,7 +1093,7 @@ const MASTER_OF_FORUMS = () => {
               GM_notification({
                 title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
                 text: `\u{1F50A}${content.error}`,
-                image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+                image: GM_getResourceURL('MainICON'),
                 timeout: 9 * 1000,
                 onclick: () => {
                   GM_openInTab(GM_info.script?.homepage, {
@@ -1104,7 +1105,7 @@ const MASTER_OF_FORUMS = () => {
               GM_notification({
                 title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
                 text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-                image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+                image: GM_getResourceURL('MainICON'),
                 timeout: 4 * 1000,
                 onclick: () => {
                   GM_openInTab(GM_info.script?.homepage, {
@@ -1117,7 +1118,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
               onclick: () => {
                 GM_openInTab(GM_info.script?.homepage, {
@@ -1131,7 +1132,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
             onclick: () => {
               GM_openInTab(GM_info.script?.homepage, {
@@ -1144,7 +1145,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
             onclick: () => {
               GM_openInTab(GM_info.script?.homepage, {
@@ -1440,7 +1441,7 @@ const MASTER_OF_FORUMS = () => {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
         text: '\u{6682}\u{53EA}\u{652F}\u{6301}\u{62D6}\u{62FD}\u{4E0A}\u{4F20}\u{56FE}\u{7247}\u{6587}\u{4EF6}\u{FF01}',
-        image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+        image: GM_getResourceURL('MainICON'),
         timeout: 4 * 1000,
       });
     }
@@ -2136,7 +2137,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: `\u{89E3}\u{7801}\u{7ED3}\u{679C}：${data}（\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}）`,
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 60 * 1000,
           });
           // Audio Notice
@@ -2145,7 +2146,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{89E3}\u{7801}\u{5931}\u{8D25}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
           });
         }
@@ -2162,7 +2163,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: `\u{7F16}\u{7801}\u{7ED3}\u{679C}：${data}（\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}）`,
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 9 * 1000,
         });
         // Audio Notice
@@ -2204,7 +2205,7 @@ const MASTER_OF_FORUMS = () => {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{7B7E}\u{5230}\u{671F}\u{95F4}\u{8BF7}\u{52FF}\u{5237}\u{65B0}\u{9875}\u{9762}\u{FF08}\u{5927}\u{7EA6}\u{5341}\u{79D2}\u{FF09}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          image: GM_getResourceURL('MainICON'),
           timeout: 4 * 1000,
         });
         GM_xmlhttpRequest({
@@ -2235,7 +2236,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{7B7E}\u{5230}\u{4EFB}\u{52A1}\u{6267}\u{884C}\u{5B8C}\u{6210}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: GM_getResourceURL('MainICON'),
             timeout: 4 * 1000,
             onclick: () => {
               GM_openInTab(`//${HOSTNAME}/home.php?mod=space&do=friend&view=trace`, {
@@ -2651,7 +2652,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{6210}\u{529F}\u{7A81}\u{7834}\u{8A00}\u{8BBA}\u{5C01}\u{9501}（${i}）`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
           }, 0);
@@ -2670,7 +2671,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{6210}\u{529F}\u{7A81}\u{7834}\u{8A00}\u{8BBA}\u{5C01}\u{9501}（${key}）\u{279C}（${value}）`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
           }, 0);

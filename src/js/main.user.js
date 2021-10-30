@@ -173,10 +173,14 @@
 // @connect           flickr.com
 // @connect           gitbook.com
 // @connect           gitbook.io
+// @connect           github.app
 // @connect           github.com
+// @connect           github.dev
 // @connect           github.io
 // @connect           githubusercontent.com
+// @connect           gitlab.app
 // @connect           gitlab.com
+// @connect           gitlab.dev
 // @connect           gitlab.io
 // @connect           gitlabusercontent.com
 // @connect           gmail.com
@@ -199,7 +203,6 @@
 // @connect           imgurl.org
 // @connect           ipfs.com
 // @connect           ipfs.io
-// @connect           iqiyi.com
 // @connect           jd.com
 // @connect           jin10.com
 // @connect           js.org
@@ -297,6 +300,7 @@
 // @connect           vercel.app
 // @connect           vercel.com
 // @connect           vk.com
+// @connect           web.dev
 // @connect           wechat.com
 // @connect           weibo.cn
 // @connect           weibo.com
@@ -309,14 +313,15 @@
 // @connect           xueqiu.com
 // @connect           yahoo.com
 // @connect           yandex.com
-// @connect           ycombinator.com
 // @connect           youdao.com
 // @connect           youtube.com
 // @connect           zhihu.com
+// @connect           zoom.app
 // @connect           zoom.com
 // @connect           zoom.io
 // @connect           zoom.us
 // @run-at            document-start
+// @require           https://cdn.jsdelivr.net/npm/filesize@8/lib/filesize.es6.min.js
 // @resource          MainCSS https://github.com/master-of-forums/master-of-forums/raw/main/src/css/main.css
 // @grant             GM_info
 // @grant             GM_getValue
@@ -378,7 +383,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211027,
+    version: 20211030,
     window: {},
   };
 
@@ -1008,7 +1013,8 @@ const MASTER_OF_FORUMS = () => {
     } else {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-        text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{8282}\u{70B9}）',
+        // eslint-disable-next-line no-undef
+        text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{8282}\u{70B9}）\n文件名字：${FILE.name}\n文件大小：${filesize(FILE.size, { base: 2 })}`,
         image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
         timeout: 4 * 1000,
       });

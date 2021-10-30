@@ -150,6 +150,8 @@
 // @connect           coinmarketcap.com
 // @connect           datausa.io
 // @connect           debug.com
+// @connect           dev.to
+// @connect           devdocs.io
 // @connect           dianping.com
 // @connect           digitalocean.com
 // @connect           dingtalk.com

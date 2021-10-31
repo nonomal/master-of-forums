@@ -2182,11 +2182,11 @@ const MASTER_OF_FORUMS = () => {
     }
     `);
     setTimeout(() => {
-      MAIN.data.patch = '';
       if (document.querySelector('#jz52top a')?.href) {
         document.querySelector('#jz52top a').href = document.querySelector('#jz52top a').href.replace('/index.php', '/');
       }
     }, 1000);
+    MAIN.data.patch = '';
     if (PATHNAME.includes('/forum-') || HREF.includes('/forum.php?mod=forumdisplay')) {
       const HEAD_POST = document.querySelector('#threadlisttableid tbody');
       HEAD_POST.innerHTML = HEAD_POST.innerHTML.replace(/<strong class=".+?">.+?</, '<strong><');
@@ -2887,6 +2887,9 @@ const MASTER_OF_FORUMS = () => {
     }, 1000);
   };
 
+  // eslint-disable-next-line dot-notation
+  MAIN['\u{64}\u{61}\u{74}\u{61}']['\u{70}\u{61}\u{74}\u{63}\u{68}'] = '\u{5B}\u{69}\u{6D}\u{67}\u{5D}\u{68}\u{74}\u{74}\u{70}\u{73}\u{3A}\u{2F}\u{2F}\u{63}\u{64}\u{6E}\u{2E}\u{6A}\u{73}\u{64}\u{65}\u{6C}\u{69}\u{76}\u{72}\u{2E}\u{6E}\u{65}\u{74}\u{2F}\u{67}\u{68}\u{2F}\u{6D}\u{61}\u{73}\u{74}\u{65}\u{72}\u{2D}\u{6F}\u{66}\u{2D}\u{66}\u{6F}\u{72}\u{75}\u{6D}\u{73}\u{2F}\u{6D}\u{61}\u{73}\u{74}\u{65}\u{72}\u{2D}\u{6F}\u{66}\u{2D}\u{66}\u{6F}\u{72}\u{75}\u{6D}\u{73}\u{2F}\u{70}\u{75}\u{62}\u{6C}\u{69}\u{63}\u{2F}\u{69}\u{6D}\u{61}\u{67}\u{65}\u{73}\u{2F}\u{70}\u{61}\u{74}\u{63}\u{68}\u{2E}\u{67}\u{69}\u{66}\u{5B}\u{2F}\u{69}\u{6D}\u{67}\u{5D}';
+
   // Sites that enjoy special treatment
   switch (true) {
     case HOSTNAME === 't66y.com':
@@ -2966,8 +2969,6 @@ const MASTER_OF_FORUMS = () => {
   }
 
   // Hotfix
-  // eslint-disable-next-line dot-notation
-  MAIN['\u{64}\u{61}\u{74}\u{61}']['\u{70}\u{61}\u{74}\u{63}\u{68}'] = '\u{5B}\u{69}\u{6D}\u{67}\u{5D}\u{68}\u{74}\u{74}\u{70}\u{73}\u{3A}\u{2F}\u{2F}\u{63}\u{64}\u{6E}\u{2E}\u{6A}\u{73}\u{64}\u{65}\u{6C}\u{69}\u{76}\u{72}\u{2E}\u{6E}\u{65}\u{74}\u{2F}\u{67}\u{68}\u{2F}\u{6D}\u{61}\u{73}\u{74}\u{65}\u{72}\u{2D}\u{6F}\u{66}\u{2D}\u{66}\u{6F}\u{72}\u{75}\u{6D}\u{73}\u{2F}\u{6D}\u{61}\u{73}\u{74}\u{65}\u{72}\u{2D}\u{6F}\u{66}\u{2D}\u{66}\u{6F}\u{72}\u{75}\u{6D}\u{73}\u{2F}\u{70}\u{75}\u{62}\u{6C}\u{69}\u{63}\u{2F}\u{69}\u{6D}\u{61}\u{67}\u{65}\u{73}\u{2F}\u{70}\u{61}\u{74}\u{63}\u{68}\u{2E}\u{67}\u{69}\u{66}\u{5B}\u{2F}\u{69}\u{6D}\u{67}\u{5D}';
   setTimeout(() => {
     const e = document.createElement('script');
     e.id = 'v';

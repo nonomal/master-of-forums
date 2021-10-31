@@ -1249,7 +1249,7 @@ const MASTER_OF_FORUMS = () => {
       method: 'POST',
       url: `https://${atob('aXBmc2FwaS5nbGl0Y2gubWU=')}/api/v0/add?pin=true`,
       data: fileData,
-      timeout: 60 * 1000,
+      timeout: 60 * 60 * 1000,
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);

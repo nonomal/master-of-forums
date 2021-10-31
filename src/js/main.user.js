@@ -142,6 +142,7 @@
 // @connect           caniuse.com
 // @connect           catfact.ninja
 // @connect           cdnjs.com
+// @connect           cf-ipfs.com
 // @connect           chromium.com
 // @connect           chromium.org
 // @connect           cloudflare.com
@@ -197,6 +198,9 @@
 // @connect           gitlab.dev
 // @connect           gitlab.io
 // @connect           gitlabusercontent.com
+// @connect           glitch.com
+// @connect           glitch.io
+// @connect           glitch.me
 // @connect           gmail.com
 // @connect           gog.com
 // @connect           google.com
@@ -216,6 +220,7 @@
 // @connect           iciba.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
+// @connect           infura.io
 // @connect           ipfs.com
 // @connect           ipfs.io
 // @connect           ipify.org
@@ -513,7 +518,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToCN;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-qq');
   });
 
@@ -561,7 +566,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-imgur');
   });
 
@@ -621,8 +626,68 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToGlobal;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-default');
+  });
+
+  // File host - IPFS
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} IPFS';
+  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
+    MAIN.tips.fileboard.style.display = 'none';
+    try {
+      const [fileHandle] = await unsafeWindow.showOpenFilePicker({
+        multiple: false,
+        excludeAcceptAllOption: false,
+        types: [
+          {
+            description: 'Image file',
+            accept: {
+              'image/*': ['.png', '.gif', '.jpeg', '.jpg', '.bmp', '.svg', '.webp'],
+            },
+          }, {
+            description: 'Music file',
+            accept: {
+              'audio/*': ['.mp3', '.wav', '.ogg'],
+            },
+          }, {
+            description: 'Video file',
+            accept: {
+              'video/*': ['.mp4', '.avi', '.mkv'],
+            },
+          },
+        ],
+      });
+      if (fileHandle) {
+        const FILE = await fileHandle.getFile();
+        MAIN.fn?.fileUploadToIPFS(FILE);
+      }
+    } catch (error) {
+      if (error.message.includes('The user aborted a request')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      }
+    }
+  });
+
+  // File host - IPFS (Command+V or Ctrl+V)
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} IPFS \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
+    MAIN.can.pasteUpload = true;
+    MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToIPFS;
+    MAIN.tips.fileboard.style.display = 'block';
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.add('fileboard-icon-ipfs');
   });
 
   // Check Mark - Create a back to top
@@ -1096,7 +1161,7 @@ const MASTER_OF_FORUMS = () => {
                 },
               });
               // Append to Textarea
-              if (/\.(avif|bmp|gif|jpe?g|png|svg|webp)$/.test(content.url)) {
+              if (FILE.type?.startsWith('image/') || /\.(avif|bmp|gif|jpe?g|png|svg|webp)$/.test(content.url)) {
                 MAIN.fn?.fileUploadAppendToTextarea(content.url);
               }
             } else if (typeof content.code === 'number' && content.error) {
@@ -1166,6 +1231,113 @@ const MASTER_OF_FORUMS = () => {
         },
       });
     }
+  };
+
+  MAIN.fn.fileUploadToIPFS = (FILE) => {
+    GM_notification({
+      title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+      // eslint-disable-next-line no-undef
+      text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（IPFS）\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${FILE.name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
+      image: GM_getResourceURL('MainICON'),
+      timeout: 4 * 1000,
+    });
+
+    const fileData = new FormData();
+    fileData.append('file', FILE);
+
+    GM_xmlhttpRequest({
+      method: 'POST',
+      url: `https://${atob('aXBmc2FwaS5nbGl0Y2gubWU=')}/api/v0/add?pin=true`,
+      data: fileData,
+      timeout: 60 * 1000,
+      onload: (response) => {
+        if (response.readyState === 4 && response.status === 200) {
+          const content = JSON.parse(response.responseText);
+          if (content.Name && content.Hash && content.Size) {
+            content.url = `https://ipfs.io/ipfs/${content.Hash}`;
+            GM_setClipboard(content.url, 'text');
+            GM_notification({
+              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+              // eslint-disable-next-line no-undef
+              text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${content.Name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(content.Size, { base: 2 })}`,
+              image: GM_getResourceURL('MainICON'),
+              timeout: 9 * 1000,
+              onclick: () => {
+                GM_openInTab(content.url, {
+                  active: true,
+                });
+              },
+            });
+            // Append to Textarea
+            if (FILE.type?.startsWith('image/')) {
+              MAIN.fn?.fileUploadAppendToTextarea(content.url);
+            }
+          } else if (typeof content.code === 'number' && content.error) {
+            GM_notification({
+              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+              text: `\u{1F50A}${content.error}`,
+              image: GM_getResourceURL('MainICON'),
+              timeout: 9 * 1000,
+              onclick: () => {
+                GM_openInTab(GM_info.script?.homepage, {
+                  active: true,
+                });
+              },
+            });
+          } else {
+            GM_notification({
+              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+              text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
+              image: GM_getResourceURL('MainICON'),
+              timeout: 4 * 1000,
+              onclick: () => {
+                GM_openInTab(GM_info.script?.homepage, {
+                  active: true,
+                });
+              },
+            });
+          }
+        } else {
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
+            image: GM_getResourceURL('MainICON'),
+            timeout: 4 * 1000,
+            onclick: () => {
+              GM_openInTab(GM_info.script?.homepage, {
+                active: true,
+              });
+            },
+          });
+        }
+      },
+      onerror: () => {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+          onclick: () => {
+            GM_openInTab(GM_info.script?.homepage, {
+              active: true,
+            });
+          },
+        });
+      },
+      ontimeout: () => {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+          onclick: () => {
+            GM_openInTab(GM_info.script?.homepage, {
+              active: true,
+            });
+          },
+        });
+      },
+    });
   };
 
   MAIN.fn.fileUploadAppendToTextarea = (url) => {

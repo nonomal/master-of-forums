@@ -363,6 +363,10 @@ img.master-badge.node-reappear {
   content: "";
 }
 
+.master-of-forums .main-fileboard .fileboard-icon-ipfs {
+  background-image: url(//ipfs.io/favicon.ico);
+}
+
 .master-of-forums .main-fileboard .fileboard-icon-imgur {
   background-image: url(//imgur.com/favicon.ico);
 }

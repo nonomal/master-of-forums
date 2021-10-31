@@ -1711,6 +1711,7 @@ const MASTER_OF_FORUMS = () => {
         ['\u{59E6}', 'Jiān'],
         ['\u{53D1}\u{7968}', 'FāPiào'],
         ['\u{535A}\u{5F69}', 'BóCǎi'],
+        ['\u{4EBA}\u{4F53}', 'RénTǐ'],
         ['\u{4E73}', 'Rǔ'],
       ]);
       let content = document.getElementById('subject')?.value?.trim();

@@ -631,7 +631,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // File host - IPFS
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} IPFS';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} \u{FF29}\u{FF30}\u{FF26}\u{FF33}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -681,7 +681,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // File host - IPFS (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} IPFS \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} \u{FF29}\u{FF30}\u{FF26}\u{FF33} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToIPFS;

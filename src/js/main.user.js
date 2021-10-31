@@ -1528,14 +1528,17 @@ const MASTER_OF_FORUMS = () => {
     }
     if (MAIN.data?.hostname === 'ωωω_hostloc_com' && SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
       const CHAR = new Map([
-        ['\u{4E73}', 'Rǔ'],
-        ['\u{59E6}', 'Jiān'],
-        ['\u{5AD6}', 'Piáo'],
-        ['\u{5FAE}\u{535A}', 'WēiBó'],
-        ['\u{6DEB}', 'Yín'],
-        ['\u{7FFB}\u{5899}', 'FānQiáng'],
-        ['GFW', '[G‧F‧W]'],
         ['VPN', '[V‧P‧N]'],
+        ['GFW', '[G‧F‧W]'],
+        ['\u{7FFB}\u{5899}', 'FānQiáng'],
+        ['\u{6DEB}', 'Yín'],
+        ['\u{5FAE}\u{535A}', 'WēiBó'],
+        ['\u{5C0F}\u{59D0}\u{59D0}', 'XiǎoJiěJiě'],
+        ['\u{5C0F}\u{59D0}', 'XiǎoJiě'],
+        ['\u{5AD6}', 'Piáo'],
+        ['\u{59E6}', 'Jiān'],
+        ['\u{53D1}\u{7968}', 'FāPiào'],
+        ['\u{4E73}', 'Rǔ'],
       ]);
       let content = document.getElementById('subject')?.value?.trim();
       for (const [key, value] of CHAR) {

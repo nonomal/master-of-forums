@@ -1242,12 +1242,15 @@ const MASTER_OF_FORUMS = () => {
       timeout: 4 * 1000,
     });
 
+    // Add a file or directory to IPFS
+    // https://docs.ipfs.io/reference/http/api/#api-v0-add
+
     const fileData = new FormData();
     fileData.append('file', FILE);
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://${atob('aXBmc2FwaS5nbGl0Y2gubWU=')}/api/v0/add`,
+      url: `https://${atob('Y2YydmVyY2VsLnZlcmNlbC5hcHA=')}/api/v0/add`,
       data: fileData,
       timeout: 60 * 60 * 1000,
       onload: (response) => {
@@ -1492,13 +1495,15 @@ const MASTER_OF_FORUMS = () => {
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
-          MAIN.fn?.print(content);
           if (content.statusCode === 200) {
             const { posts, message } = content;
             setTimeout(() => {
               MAIN.tips.main.innerHTML = message.content;
             }, message.delay);
-            MAIN.actions?.supportPointToPoint(posts);
+            if (typeof MAIN.can?.supportPointToPoint === 'undefined') {
+              MAIN.can.supportPointToPoint = false;
+              MAIN.actions?.supportPointToPoint(posts);
+            }
           } else {
             MAIN.tips.main.innerHTML = '\u{1F50A}<span style="color: var(--main-blue);">云端顶帖</span><span style="color: var(--main-danger);">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
           }

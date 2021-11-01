@@ -346,13 +346,12 @@ img.master-badge.node-reappear {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1rem;
-  box-shadow: 0 0 2px var(--main-gray);
+  box-shadow: inset 0 0 0.25rem var(--main-gray);
 }
 
 .master-of-forums .main-fileboard div.fileboard-icon:hover {
   background-color: var(--main-white);
   background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp);
-  box-shadow: 0 0 0.25rem var(--main-gray);
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-default::before {

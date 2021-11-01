@@ -1250,14 +1250,14 @@ const MASTER_OF_FORUMS = () => {
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://${atob('Y2YydmVyY2VsLnZlcmNlbC5hcHA=')}/api/v0/add`,
+      url: `https://${atob('Y2YydmVyY2VsLnZlcmNlbC5hcHA=')}/api/v0/add?cid-version=1`,
       data: fileData,
       timeout: 60 * 60 * 1000,
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
           if (content.Name && content.Hash && content.Size) {
-            content.url = `https://ipfs.io/ipfs/${content.Hash}`;
+            content.url = `https://${content.Hash}.ipfs.dweb.link/`;
             GM_setClipboard(content.url, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',

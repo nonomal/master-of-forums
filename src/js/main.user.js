@@ -1702,6 +1702,8 @@ const MASTER_OF_FORUMS = () => {
       const CHAR = new Map([
         ['VPN', '[V‧P‧N]'],
         ['GFW', '[G‧F‧W]'],
+        ['\u{8272}\u{60C5}', 'SèQíng'],
+        ['\u{81EA}\u{62CD}', 'ZìPāi'],
         ['\u{7FFB}\u{5899}', 'FānQiáng'],
         ['\u{6DEB}', 'Yín'],
         ['\u{5FAE}\u{535A}', 'WēiBó'],
@@ -1709,6 +1711,7 @@ const MASTER_OF_FORUMS = () => {
         ['\u{5C0F}\u{59D0}', 'XiǎoJiě'],
         ['\u{5AD6}', 'Piáo'],
         ['\u{59E6}', 'Jiān'],
+        ['\u{5907}\u{6848}', 'Bèiàn'],
         ['\u{53D1}\u{7968}', 'FāPiào'],
         ['\u{535A}\u{5F69}', 'BóCǎi'],
         ['\u{4EBA}\u{4F53}', 'RénTǐ'],

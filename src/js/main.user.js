@@ -1272,7 +1272,7 @@ const MASTER_OF_FORUMS = () => {
               },
             });
             // Append to Textarea
-            if (FILE.type?.startsWith('image/')) {
+            if (FILE.type?.startsWith('image/') || /\.(avif|bmp|gif|jpe?g|png|svg|webp)$/.test(FILE.name)) {
               MAIN.fn?.fileUploadAppendToTextarea(content.url);
             }
           } else if (typeof content.code === 'number' && content.error) {

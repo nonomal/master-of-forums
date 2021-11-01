@@ -1247,7 +1247,7 @@ const MASTER_OF_FORUMS = () => {
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://${atob('aXBmc2FwaS5nbGl0Y2gubWU=')}/api/v0/add?pin=true`,
+      url: `https://${atob('aXBmc2FwaS5nbGl0Y2gubWU=')}/api/v0/add`,
       data: fileData,
       timeout: 60 * 60 * 1000,
       onload: (response) => {

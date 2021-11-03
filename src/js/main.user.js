@@ -1623,15 +1623,13 @@ const MASTER_OF_FORUMS = () => {
   MAIN.tips.fileboardContent.addEventListener('drop', (event) => {
     event.target.classList.remove('active');
     const fileList = event.dataTransfer?.files;
-    MAIN.fn?.print(fileList?.length);
-    MAIN.fn?.print(fileList[0]?.type, typeof fileList[0]?.type);
-    if (fileList?.length === 1) {
+    if (fileList?.length === 1 && typeof fileList[0]?.type === 'string') {
       const FILE = fileList[0];
       MAIN.fn?.fileUploadFunction(FILE);
     } else {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-        text: '\u{6682}\u{53EA}\u{652F}\u{6301}\u{62D6}\u{62FD}\u{4E0A}\u{4F20}\u{56FE}\u{7247}\u{6587}\u{4EF6}\u{FF01}',
+        text: '\u{4E0D}\u{652F}\u{6301}\u{7684}\u{6587}\u{4EF6}\u{7C7B}\u{578B}',
         image: GM_getResourceURL('MainICON'),
         timeout: 4 * 1000,
       });

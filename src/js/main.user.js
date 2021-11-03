@@ -430,9 +430,11 @@ const MASTER_OF_FORUMS = () => {
     },
     domains: {},
     fn: {
-      print(...args) {
-        // eslint-disable-next-line no-console
-        console.log((Date.now() / 1000).toFixed(3), ...args);
+      print: (...args) => {
+        if (localStorage.mode === 'development') {
+          // eslint-disable-next-line no-console
+          console.log((Date.now() / 1000).toFixed(3), ...args);
+        }
       },
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
@@ -1452,7 +1454,7 @@ const MASTER_OF_FORUMS = () => {
           timeout: 4 * 1000,
           onload: (response) => {
             if (response.readyState === 4 && response.status === 200) {
-              // console.log();
+              MAIN.fn?.print('OK');
             }
           },
         });
@@ -2386,7 +2388,6 @@ const MASTER_OF_FORUMS = () => {
         }
         if (document.getElementById('messagelogin') && Math.random() < 0.01) {
           MESSAGE_TEXT.innerHTML += '\n<p style="padding-top: 1rem;"><span class="main-flash">\u{1F916}</span>&nbsp;<a href="//github.com/master-of-forums/master-of-forums/search?q=\u{45}\u{2D}\u{4D}\u{61}\u{69}\u{6C}" rel="external nofollow noopener" target="_blank">\u{7ED9}\u{6211}\u{6765}\u{4FE1}</a>（<span style="color: var(--main-gray);">\u{6CE8}\u{660E}\u{8BBA}\u{575B}</span>）\u{5C06}\u{6709}\u{53EF}\u{80FD}<span style="color: var(--main-red);">\u{0032}\u{0034}\u{5C0F}\u{65F6}</span>\u{5185}\u{6536}\u{5230}\u{8BBA}\u{575B}<span style="color: var(--main-green);">\u{9080}\u{8BF7}\u{7801}</span>（<img style="position: relative; top: 2px; width: 1rem; height: 1rem;" src="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp" loading="lazy" referrerpolicy="no-referrer" draggable="false"><a href="https://github.com/master-of-forums/master-of-forums" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">\u{8BBA}\u{575B}\u{5927}\u{5E08}</span></a>）</p>';
-          localStorage.clear();
         }
       }, 100);
     } else if (PATHNAME.includes('/space-uid-') || PATHNAME.includes('/space-username-') || HREF.includes('/home.php?mod=space')) {

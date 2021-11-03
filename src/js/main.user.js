@@ -1624,8 +1624,8 @@ const MASTER_OF_FORUMS = () => {
     event.target.classList.remove('active');
     const fileList = event.dataTransfer?.files;
     MAIN.fn?.print(fileList?.length);
-    MAIN.fn?.print(fileList[0].type);
-    if (fileList?.length && fileList[0]?.type?.startsWith('image/')) {
+    MAIN.fn?.print(fileList[0]?.type, typeof fileList[0]?.type);
+    if (fileList?.length === 1) {
       const FILE = fileList[0];
       MAIN.fn?.fileUploadFunction(FILE);
     } else {

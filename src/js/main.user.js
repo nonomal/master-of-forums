@@ -1623,6 +1623,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.tips.fileboardContent.addEventListener('drop', (event) => {
     event.target.classList.remove('active');
     const fileList = event.dataTransfer?.files;
+    MAIN.fn?.print(fileList?.length);
     MAIN.fn?.print(fileList[0].type);
     if (fileList?.length && fileList[0]?.type?.startsWith('image/')) {
       const FILE = fileList[0];

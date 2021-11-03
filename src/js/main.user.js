@@ -520,7 +520,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToCN;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-qq');
   });
 
@@ -568,7 +568,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-imgur');
   });
 
@@ -628,8 +628,8 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToGlobal;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
-    MAIN.tips.fileboardIcon.classList.add('fileboard-icon-default');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.add('fileboard-icon-alibabacloud');
   });
 
   // File host - IPFS
@@ -688,7 +688,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToIPFS;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-qq', 'fileboard-icon-suning');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-ipfs');
   });
 

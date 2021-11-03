@@ -387,12 +387,11 @@ img.master-badge.node-reappear {
   line-height: 2rem;
   cursor: pointer;
   background-color: var(--main-light);
-  box-shadow: 0 0 2px var(--main-gray);
+  box-shadow: inset 0 0 0.25rem var(--main-gray);
 }
 
 .master-of-forums .main-fileboard .fileboard-close:hover {
   background-color: var(--main-white);
-  box-shadow: 0 0 0.25rem var(--main-gray);
 }
 
 .master-of-forums .main-fileboard .fileboard-close::before {

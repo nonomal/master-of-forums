@@ -1705,8 +1705,8 @@ const MASTER_OF_FORUMS = () => {
     }
     if (MAIN.data?.hostname === 'ωωω_hostloc_com' && SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
       const CHAR = new Map([
-        ['VPN', '[V‧P‧N]'],
-        ['GFW', '[G‧F‧W]'],
+        ['VPN', 'V\u{200B}P\u{200B}N'],
+        ['GFW', 'G\u{200B}F\u{200B}W'],
         ['\u{8272}\u{60C5}', 'SèQíng'],
         ['\u{81EA}\u{62CD}', 'ZìPāi'],
         ['\u{7FFB}\u{5899}', 'FānQiáng'],

@@ -1022,7 +1022,6 @@ const MASTER_OF_FORUMS = () => {
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
-        MAIN.fn?.print(response)
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
           if ((content.url || content.original) && content.state === 'SUCCESS') {

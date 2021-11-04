@@ -48,7 +48,7 @@
   --main-body-rgb: 33, 37, 41;
   --main-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei New", "Microsoft YaHei", "Source Han Sans SC", "WenQuanYi Micro Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --main-font-monospace: "Fira Code", "Cascadia Code", "Cascadia Mono", "JetBrains Mono", Iosevka, Hack, "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "Noto Sans Mono", "Noto Sans Mono CJK SC", "Sarasa Mono SC", "Microsoft YaHei Mono", "WenQuanYi Micro Hei Mono", monospace;
-  --main-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --main-gradient: linear-gradient(180deg, rgb(255 255 255 / 15%), rgb(255 255 255 / 0%));
   --main-body-font-family: var(--main-font-sans-serif);
   --main-body-font-size: 1rem;
   --main-body-font-weight: 400;
@@ -74,8 +74,8 @@ html {
   text-align: var(--main-body-text-align);
   user-select: none;
   background-color: var(--main-body-bg);
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 .master-of-forums *,
@@ -148,7 +148,7 @@ img[src$="default-avatar-middle.webp"] {
   max-width: 120px;
   max-height: 120px;
   object-fit: contain;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 4px rgb(255 255 255 / 50%);
 }
 
 .bui .m img:hover {
@@ -167,8 +167,8 @@ form textarea,
   font-weight: var(--main-body-font-weight);
   line-height: var(--main-body-line-height);
   text-align: var(--main-body-text-align);
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 #postlist .sign {
@@ -216,11 +216,11 @@ img.master-badge {
   display: block;
   touch-action: none;
   cursor: default;
-  content: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg);
+  content: url("//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg");
   user-select: none;
   border: none;
   box-shadow: none;
-  opacity: 0.5;
+  opacity: 50%;
   transition: opacity 1s;
   -webkit-user-drag: none;
 }
@@ -232,7 +232,7 @@ img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/
 img.master-badge:hover {
   filter: drop-shadow(0 0 2px #fff);
   box-shadow: none;
-  opacity: 1;
+  opacity: 100%;
 }
 
 /* Flash */
@@ -240,12 +240,12 @@ img.master-badge:hover {
   from,
   50%,
   to {
-    opacity: 1;
+    opacity: 100%;
   }
 
   25%,
   75% {
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -265,8 +265,8 @@ img.master-badge.node-reappear {
 
 /* Textarea */
 @keyframes et {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0%; }
+  to { opacity: 100%; }
 }
 
 #e_textarea {
@@ -284,13 +284,13 @@ img.master-badge.node-reappear {
   font-weight: var(--main-body-font-weight);
   line-height: var(--main-body-line-height);
   text-align: var(--main-body-text-align);
-  text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 1rem rgb(255 255 255 / 50%);
   touch-action: none;
   user-select: none;
-  opacity: 1;
+  opacity: 100%;
   transition: none;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 .master-of-forums #main-tip span {
@@ -299,7 +299,7 @@ img.master-badge.node-reappear {
   font-weight: var(--main-body-font-weight);
   line-height: var(--main-body-line-height);
   text-align: var(--main-body-text-align);
-  text-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 1rem rgb(255 255 255 / 50%);
   touch-action: none;
   user-select: none;
 }
@@ -315,7 +315,7 @@ img.master-badge.node-reappear {
   padding-top: 3rem;
   color: var(--main-dark);
   white-space: nowrap;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255 255 255 / 80%);
   border-radius: 0.5rem;
   box-shadow: 0 0 0.25rem var(--main-gray);
   transform: translate(-50%, -50%);
@@ -342,7 +342,7 @@ img.master-badge.node-reappear {
   line-height: 2rem;
   cursor: pointer;
   background-color: var(--main-light);
-  background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/hsts-pixel.gif);
+  background-image: url("//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/hsts-pixel.gif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1rem;
@@ -351,7 +351,7 @@ img.master-badge.node-reappear {
 
 .master-of-forums .main-fileboard div.fileboard-icon:hover {
   background-color: var(--main-white);
-  background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp);
+  background-image: url("//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp");
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-default::before {
@@ -363,23 +363,23 @@ img.master-badge.node-reappear {
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-ipfs {
-  background-image: url(//ipfs.io/favicon.ico);
+  background-image: url("//ipfs.io/favicon.ico");
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-imgur {
-  background-image: url(//imgur.com/favicon.ico);
+  background-image: url("//imgur.com/favicon.ico");
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-alibabacloud {
-  background-image: url(//www.alibabacloud.com/favicon.ico);
+  background-image: url("//www.alibabacloud.com/favicon.ico");
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-qq {
-  background-image: url(//www.qq.com/favicon.ico);
+  background-image: url("//www.qq.com/favicon.ico");
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-suning {
-  background-image: url(//www.suning.com/favicon.ico);
+  background-image: url("//www.suning.com/favicon.ico");
 }
 
 .master-of-forums .main-fileboard .fileboard-close {
@@ -448,10 +448,10 @@ img.master-badge.node-reappear {
   height: 4rem;
   cursor: pointer;
   user-select: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
   border-radius: 50%;
   box-shadow: inset 0 0 1rem var(--main-gray);
-  opacity: 0.5;
+  opacity: 50%;
   backdrop-filter: blur(0.25rem);
   -webkit-user-drag: none;
 }
@@ -476,7 +476,7 @@ img.master-badge.node-reappear {
   filter: drop-shadow(0 0 0.5rem #fff);
   border-color: transparent transparent var(--main-gray) transparent;
   border-style: solid;
-  border-width: 0 1rem 1.5rem 1rem;
+  border-width: 0 1rem 1.5rem;
 }
 
 /* Drawer */
@@ -491,8 +491,8 @@ img.master-badge.node-reappear {
   overflow-x: hidden;
   overflow-y: scroll;
   user-select: none;
-  background-color: rgba(240, 240, 240, 0.5);
-  opacity: 0;
+  background-color: rgb(240 240 240 / 50%);
+  opacity: 0%;
   transition: transform 0.5s linear, opacity 0s 0.5s;
   transform: translateX(-40rem);
   backdrop-filter: blur(0.25rem);
@@ -500,7 +500,7 @@ img.master-badge.node-reappear {
 }
 
 .master-of-forums .discussion:hover {
-  opacity: 1;
+  opacity: 100%;
   transition: transform 0.5s linear;
   transform: translateX(0);
 }
@@ -641,7 +641,7 @@ img.master-badge.node-reappear {
   left: 50%;
   width: 8rem;
   height: 8rem;
-  background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/hsts-pixel.gif);
+  background-image: url("//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/hsts-pixel.gif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -651,15 +651,15 @@ img.master-badge.node-reappear {
 }
 
 .discussion-list .discussion-list-fail-error {
-  background-image: url(//api.wolai.com/v1/icon?type=0);
+  background-image: url("//api.wolai.com/v1/icon?type=0");
 }
 
 .discussion-list .discussion-list-fail-timeout {
-  background-image: url(//api.wolai.com/v1/icon?type=1);
+  background-image: url("//api.wolai.com/v1/icon?type=1");
 }
 
 .discussion-list .discussion-list-fail:hover {
-  background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp);
+  background-image: url("//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp");
   background-size: 4rem 4rem;
 }
 
@@ -683,8 +683,8 @@ img.master-badge.node-reappear {
   font-weight: var(--main-body-font-weight);
   line-height: var(--main-body-line-height);
   text-align: var(--main-body-text-align);
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   animation: et 1s;
 }
 

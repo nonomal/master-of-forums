@@ -382,6 +382,10 @@ img.master-badge.node-reappear {
   background-image: url("//www.suning.com/favicon.ico");
 }
 
+.master-of-forums .main-fileboard .fileboard-icon-muke {
+  background-image: url("//www.imooc.com/favicon.ico");
+}
+
 .master-of-forums .main-fileboard .fileboard-close {
   position: absolute;
   top: 0.5rem;

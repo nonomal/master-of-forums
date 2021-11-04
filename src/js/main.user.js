@@ -220,6 +220,7 @@
 // @connect           iciba.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
+// @connect           imooc.com
 // @connect           infura.io
 // @connect           ipfs.com
 // @connect           ipfs.io
@@ -268,6 +269,8 @@
 // @connect           mozilla.org
 // @connect           msn.com
 // @connect           mubu.com
+// @connect           muke.com
+// @connect           mukewang.com
 // @connect           myqcloud.com
 // @connect           namesilo.com
 // @connect           nationalize.io

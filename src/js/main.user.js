@@ -117,6 +117,7 @@
 // @connect           aliyuncs.com
 // @connect           amap.com
 // @connect           amazon.com
+// @connect           amazonaws.com
 // @connect           android.com
 // @connect           api.imgur.com
 // @connect           api.video

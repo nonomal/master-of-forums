@@ -238,6 +238,7 @@
 // @connect           kuaidi.com
 // @connect           ledger.com
 // @connect           like.com
+// @connect           linode.com
 // @connect           lunarcrush.com
 // @connect           mail.com
 // @connect           maoyan.com

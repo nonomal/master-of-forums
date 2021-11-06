@@ -626,7 +626,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{5E8A}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -664,7 +664,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{5E8A}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;
@@ -1288,7 +1288,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToUS = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      text: '\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}）',
+      text: '\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{5E8A}）',
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });

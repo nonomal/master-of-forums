@@ -3101,14 +3101,6 @@ const MASTER_OF_FORUMS = () => {
           }
         }
         document.getElementById('subject').value = titleContent;
-        setTimeout(() => {
-          GM_notification({
-            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-            text: '\u{6210}\u{529F}\u{7A81}\u{7834}\u{8A00}\u{8BBA}\u{5C01}\u{9501}（\u{1F514}\u{6807}\u{9898}\u{1F514}）',
-            image: GM_getResourceURL('MainICON'),
-            timeout: 4 * 1000,
-          });
-        }, 0);
       }
       for (const i of DATA_LIST) {
         if (data.includes(i)) {

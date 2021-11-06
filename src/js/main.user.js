@@ -3089,7 +3089,7 @@ const MASTER_OF_FORUMS = () => {
         ['\u{6DEB}', 'Yín'],
       ]);
       if (SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
-        let titleContent = document.getElementById('subject')?.value?.trim();
+        let titleContent = document.getElementById('subject').value.trim();
         for (const i of DATA_LIST) {
           if (titleContent.includes(i)) {
             titleContent = titleContent.replaceAll(i, i.split('').join('\u{200B}'));

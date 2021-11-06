@@ -3088,7 +3088,7 @@ const MASTER_OF_FORUMS = () => {
         ['\u{5AD6}', 'Piáo'],
         ['\u{6DEB}', 'Yín'],
       ]);
-      if (SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
+      if ((SEARCH_PARAMS.get('action') === 'newthread' || SEARCH_PARAMS.get('action') === 'edit') && document.getElementById('subject')?.value?.trim()) {
         let titleContent = document.getElementById('subject').value.trim();
         for (const i of DATA_LIST) {
           if (titleContent.includes(i)) {

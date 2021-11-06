@@ -468,13 +468,13 @@ const MASTER_OF_FORUMS = () => {
   // Monkey Menu
   const MONKEY_MENU = {};
 
-  MONKEY_MENU.name = `\u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name} \u{30FB} \u{4E3B}\u{9875}（${MAIN.channel}）`;
+  MONKEY_MENU.name = `\u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name}\u{30FB}\u{4E3B}\u{9875}（${MAIN.channel}）`;
   GM_registerMenuCommand(MONKEY_MENU.name, () => {
     GM_openInTab(GM_info.script?.homepage, {
       active: true,
     });
   });
-  MONKEY_MENU.name = `\u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name} \u{30FB} \u{4ED3}\u{5E93}（${MAIN.channel}）`;
+  MONKEY_MENU.name = `\u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name}\u{30FB}\u{4ED3}\u{5E93}（${MAIN.channel}）`;
   GM_registerMenuCommand(MONKEY_MENU.name, () => {
     GM_openInTab(MAIN.repository, {
       active: true,
@@ -520,7 +520,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China Baidu (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaBaidu;
@@ -568,7 +568,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China QQ (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaQQ;
@@ -616,7 +616,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{5E8A} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{5E8A}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;
@@ -676,7 +676,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // File host - Global (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{8282}\u{70B9} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{8282}\u{70B9}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToGlobal;
@@ -736,7 +736,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // File host - IPFS (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} \u{FF29}\u{FF30}\u{FF26}\u{FF33} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F4E4} \u{6587}\u{4EF6}\u{4E0A}\u{4F20} \u{279C} \u{FF29}\u{FF30}\u{FF26}\u{FF33}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToIPFS;

@@ -444,7 +444,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211101,
+    version: 20211106,
     window: {},
   };
 
@@ -479,6 +479,54 @@ const MASTER_OF_FORUMS = () => {
     GM_openInTab(MAIN.repository, {
       active: true,
     });
+  });
+
+  // Picture host - China Baidu
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}';
+  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
+    MAIN.tips.fileboard.style.display = 'none';
+    try {
+      const [fileHandle] = await unsafeWindow.showOpenFilePicker({
+        multiple: false,
+        excludeAcceptAllOption: true,
+        types: [{
+          description: 'Images',
+          accept: {
+            'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
+          },
+        }],
+      });
+      if (fileHandle) {
+        const FILE = await fileHandle.getFile();
+        MAIN.fn?.fileUploadToChinaBaidu(FILE);
+      }
+    } catch (error) {
+      if (error.message.includes('The user aborted a request')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      }
+    }
+  });
+
+  // Picture host - China Baidu (Command+V or Ctrl+V)
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
+    MAIN.can.pasteUpload = true;
+    MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaBaidu;
+    MAIN.tips.fileboard.style.display = 'block';
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
+    MAIN.tips.fileboardIcon.classList.add('fileboard-icon-baidu');
   });
 
   // Picture host - China QQ
@@ -525,56 +573,8 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaQQ;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning', 'fileboard-icon-muke');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-qq');
-  });
-
-  // Picture host - China Muke
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6155}\u{8BFE}';
-  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
-    MAIN.tips.fileboard.style.display = 'none';
-    try {
-      const [fileHandle] = await unsafeWindow.showOpenFilePicker({
-        multiple: false,
-        excludeAcceptAllOption: true,
-        types: [{
-          description: 'Images',
-          accept: {
-            'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
-          },
-        }],
-      });
-      if (fileHandle) {
-        const FILE = await fileHandle.getFile();
-        MAIN.fn?.fileUploadToChinaMuke(FILE);
-      }
-    } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
-          image: GM_getResourceURL('MainICON'),
-          timeout: 4 * 1000,
-        });
-      } else {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
-          image: GM_getResourceURL('MainICON'),
-          timeout: 4 * 1000,
-        });
-      }
-    }
-  });
-
-  // Picture host - China Muke (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6155}\u{8BFE} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
-  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
-    MAIN.can.pasteUpload = true;
-    MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaMuke;
-    MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning', 'fileboard-icon-muke');
-    MAIN.tips.fileboardIcon.classList.add('fileboard-icon-muke');
   });
 
   // Picture host - United States
@@ -621,7 +621,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning', 'fileboard-icon-muke');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-imgur');
   });
 
@@ -681,7 +681,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToGlobal;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning', 'fileboard-icon-muke');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-alibabacloud');
   });
 
@@ -741,7 +741,7 @@ const MASTER_OF_FORUMS = () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToIPFS;
     MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-qq', 'fileboard-icon-suning', 'fileboard-icon-muke');
+    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-ipfs');
   });
 
@@ -836,61 +836,49 @@ const MASTER_OF_FORUMS = () => {
     }
   };
 
-  MAIN.fn.fileUploadToBilibili = (FILE) => {
+  MAIN.fn.fileUploadToChinaBaidu = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{54D4}\u{54E9}）',
+      // eslint-disable-next-line no-undef
+      text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });
 
     const fileData = new FormData();
     fileData.append('image', FILE);
-
-    const HUALIGS_TOKEN = [
-      'M2FkNzc3OTI5ZWRiMjk0NzE0MDg4NDM5NjA1ZThmYzg=',
-      'MjhlNDE0Y2ZiOWY0NTNiZTgyNzQ2ZTA0MGI3MTNjMDQ=',
-      'NGM1YWI0YjM4MWNhOWE4YjBlMWRkMmVkOThmNDIyZWU=',
-      'NWNkYTdlYzM2ODZlZDE1NzYwY2NkOTVmMDVkYmMyNjU=',
-      'NmJkODUzZmI2MjMxMGExYjgzODNhMDgxODQ2Y2I3N2Y=',
-      'YjI0NzQ5N2MxMTE0NTg2MmMwNjMyNWNkNGEwMzdmZjg=',
-      'ZTNkNzI3MjgwNTYxY2Y5ZGEyY2RlZDAwYzYyOTY4YjY=',
-      'ZTg5ZTQxMTk2ZTRhZWY4YTM5YjJlZmM0Y2EwNDg0ZWQ=',
-      'ZjJiMzJlYTViYWQ4ZTBlMDIwYjM1OWZhNGJkNzQ5YTI=',
-    ];
-
-    fileData.append('token', atob(HUALIGS_TOKEN[Math.floor(Math.random() * HUALIGS_TOKEN.length)]).split('').reverse().join(''));
-    fileData.append('apiType', 'bilibili');
+    fileData.append('cm', 100672);
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://${atob('d3d3Lmh1YWxpZ3MuY24=')}/api/upload`,
+      url: `https://${atob('emhpZGFvLmJhaWR1LmNvbQ==')}/submit/ajax`,
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
-          if (content.code === 200 && content.msg === 'success' && content.data?.url?.bilibili) {
-            GM_setClipboard(content.data?.url?.bilibili, 'text');
+          if (content.errorNo === '0' && content.url && content.errorMsg === '') {
+            content.url = content.url.includes('?') ? content.url.split('?')[0] : content.url;
+            GM_setClipboard(content.url, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
               image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
               onclick: () => {
-                GM_openInTab(content.data?.url?.bilibili, {
+                GM_openInTab(content.url, {
                   active: true,
                 });
               },
             });
             // Append to Textarea
-            MAIN.fn?.fileUploadAppendToTextarea(content.data?.url?.bilibili);
-          } else if (typeof content.code === 'number' && content.msg) {
+            MAIN.fn?.fileUploadAppendToTextarea(content.url);
+          } else if (content.errorMsg) {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: `\u{1F50A}${content.msg}`,
+              text: content.errorMsg,
               image: GM_getResourceURL('MainICON'),
-              timeout: 9 * 1000,
+              timeout: 4 * 1000,
             });
           } else {
             GM_notification({
@@ -964,6 +952,98 @@ const MASTER_OF_FORUMS = () => {
             // Append to Textarea
             MAIN.fn?.fileUploadAppendToTextarea(content.data?.url);
           } else if (typeof content.code === 'number' && content.msg && content.msg.includes('admin') === false && content.msg.includes('kieng') === false) {
+            GM_notification({
+              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+              text: `\u{1F50A}${content.msg}`,
+              image: GM_getResourceURL('MainICON'),
+              timeout: 9 * 1000,
+            });
+          } else {
+            GM_notification({
+              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+              text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
+              image: GM_getResourceURL('MainICON'),
+              timeout: 4 * 1000,
+            });
+          }
+        } else {
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
+            image: GM_getResourceURL('MainICON'),
+            timeout: 4 * 1000,
+          });
+        }
+      },
+      onerror: () => {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      },
+      ontimeout: () => {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      },
+    });
+  };
+
+  MAIN.fn.fileUploadToBilibili = (FILE) => {
+    GM_notification({
+      title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+      text: '\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{54D4}\u{54E9}）',
+      image: GM_getResourceURL('MainICON'),
+      timeout: 4 * 1000,
+    });
+
+    const fileData = new FormData();
+    fileData.append('image', FILE);
+
+    const HUALIGS_TOKEN = [
+      'M2FkNzc3OTI5ZWRiMjk0NzE0MDg4NDM5NjA1ZThmYzg=',
+      'MjhlNDE0Y2ZiOWY0NTNiZTgyNzQ2ZTA0MGI3MTNjMDQ=',
+      'NGM1YWI0YjM4MWNhOWE4YjBlMWRkMmVkOThmNDIyZWU=',
+      'NWNkYTdlYzM2ODZlZDE1NzYwY2NkOTVmMDVkYmMyNjU=',
+      'NmJkODUzZmI2MjMxMGExYjgzODNhMDgxODQ2Y2I3N2Y=',
+      'YjI0NzQ5N2MxMTE0NTg2MmMwNjMyNWNkNGEwMzdmZjg=',
+      'ZTNkNzI3MjgwNTYxY2Y5ZGEyY2RlZDAwYzYyOTY4YjY=',
+      'ZTg5ZTQxMTk2ZTRhZWY4YTM5YjJlZmM0Y2EwNDg0ZWQ=',
+      'ZjJiMzJlYTViYWQ4ZTBlMDIwYjM1OWZhNGJkNzQ5YTI=',
+    ];
+
+    fileData.append('token', atob(HUALIGS_TOKEN[Math.floor(Math.random() * HUALIGS_TOKEN.length)]).split('').reverse().join(''));
+    fileData.append('apiType', 'bilibili');
+
+    GM_xmlhttpRequest({
+      method: 'POST',
+      url: `https://${atob('d3d3Lmh1YWxpZ3MuY24=')}/api/upload`,
+      data: fileData,
+      timeout: 10 * 1000,
+      onload: (response) => {
+        if (response.readyState === 4 && response.status === 200) {
+          const content = JSON.parse(response.responseText);
+          if (content.code === 200 && content.msg === 'success' && content.data?.url?.bilibili) {
+            GM_setClipboard(content.data?.url?.bilibili, 'text');
+            GM_notification({
+              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+              text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
+              image: GM_getResourceURL('MainICON'),
+              timeout: 9 * 1000,
+              onclick: () => {
+                GM_openInTab(content.data?.url?.bilibili, {
+                  active: true,
+                });
+              },
+            });
+            // Append to Textarea
+            MAIN.fn?.fileUploadAppendToTextarea(content.data?.url?.bilibili);
+          } else if (typeof content.code === 'number' && content.msg) {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{1F50A}${content.msg}`,

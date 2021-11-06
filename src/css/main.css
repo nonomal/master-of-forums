@@ -374,8 +374,16 @@ img.master-badge.node-reappear {
   background-image: url("//www.alibabacloud.com/favicon.ico");
 }
 
+.master-of-forums .main-fileboard .fileboard-icon-baidu {
+  background-image: url("//www.baidu.com/favicon.ico");
+}
+
 .master-of-forums .main-fileboard .fileboard-icon-qq {
   background-image: url("//www.qq.com/favicon.ico");
+}
+
+.master-of-forums .main-fileboard .fileboard-icon-bilibili {
+  background-image: url("//www.bilibili.com/favicon.ico");
 }
 
 .master-of-forums .main-fileboard .fileboard-icon-suning {

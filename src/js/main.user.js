@@ -482,7 +482,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China Baidu
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -520,7 +520,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China Baidu (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaBaidu;
@@ -530,7 +530,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China QQ
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -568,7 +568,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China QQ (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaQQ;
@@ -578,7 +578,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China gtimg.com
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -616,7 +616,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China gtimg.com (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaGtimg;
@@ -626,7 +626,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -664,7 +664,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F341} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{30FB}\u{56FE}\u{7ED8}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;

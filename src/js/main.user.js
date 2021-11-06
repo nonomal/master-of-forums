@@ -1968,34 +1968,6 @@ const MASTER_OF_FORUMS = () => {
         i.style.visibility = 'visible';
       }, 999);
     }
-    if (MAIN.data?.hostname === 'ωωω_hostloc_com' && SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
-      const CHAR = new Map([
-        ['VPN', 'V\u{200B}P\u{200B}N'],
-        ['GFW', 'G\u{200B}F\u{200B}W'],
-        ['\u{8272}\u{60C5}', 'SèQíng'],
-        ['\u{81EA}\u{62CD}', 'ZìPāi'],
-        ['\u{7FFB}\u{5899}', 'FānQiáng'],
-        ['\u{6DEB}', 'Yín'],
-        ['\u{5FAE}\u{535A}', 'WēiBó'],
-        ['\u{5C0F}\u{59D0}\u{59D0}', 'XiǎoJiěJiě'],
-        ['\u{5C0F}\u{59D0}', 'XiǎoJiě'],
-        ['\u{5AD6}', 'Piáo'],
-        ['\u{59E6}', 'Jiān'],
-        ['\u{5907}\u{6848}', 'Bèiàn'],
-        ['\u{53D1}\u{7968}', 'FāPiào'],
-        ['\u{535A}\u{5F69}', 'BóCǎi'],
-        ['\u{5077}\u{62CD}', 'TōuPāi'],
-        ['\u{4EBA}\u{4F53}', 'RénTǐ'],
-        ['\u{4E73}', 'Rǔ'],
-      ]);
-      let content = document.getElementById('subject')?.value?.trim();
-      for (const [key, value] of CHAR) {
-        if (content.includes(key)) {
-          content = content.replaceAll(key, value);
-        }
-      }
-      document.getElementById('subject').value = content;
-    }
 
     // Show master badges
     MAIN.can.showMasterBadge = true;
@@ -3110,6 +3082,34 @@ const MASTER_OF_FORUMS = () => {
         'VPN',
         'YouTube',
       ];
+      const DATA_CHAR = new Map([
+        ['\u{4E73}', 'Rǔ'],
+        ['\u{59E6}', 'Jiān'],
+        ['\u{5AD6}', 'Piáo'],
+        ['\u{6DEB}', 'Yín'],
+      ]);
+      if (SEARCH_PARAMS.get('action') === 'newthread' && document.getElementById('subject')?.value) {
+        let titleContent = document.getElementById('subject')?.value?.trim();
+        for (const i of DATA_LIST) {
+          if (titleContent.includes(i)) {
+            titleContent = titleContent.replaceAll(i, i.split('').join('\u{200B}'));
+          }
+        }
+        for (const [key, value] of DATA_CHAR) {
+          if (titleContent.includes(key)) {
+            titleContent = titleContent.replaceAll(key, value);
+          }
+        }
+        document.getElementById('subject').value = titleContent;
+        setTimeout(() => {
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: '\u{6210}\u{529F}\u{7A81}\u{7834}\u{8A00}\u{8BBA}\u{5C01}\u{9501}（\u{1F514}\u{6807}\u{9898}\u{1F514}）',
+            image: GM_getResourceURL('MainICON'),
+            timeout: 4 * 1000,
+          });
+        }, 0);
+      }
       for (const i of DATA_LIST) {
         if (data.includes(i)) {
           data = data.replaceAll(i, i.split('').join('[u][/u]'));
@@ -3123,13 +3123,7 @@ const MASTER_OF_FORUMS = () => {
           }, 0);
         }
       }
-      const CHAR = new Map([
-        ['\u{4E73}', 'Rǔ'],
-        ['\u{59E6}', 'Jiān'],
-        ['\u{5AD6}', 'Piáo'],
-        ['\u{6DEB}', 'Yín'],
-      ]);
-      for (const [key, value] of CHAR) {
+      for (const [key, value] of DATA_CHAR) {
         if (data.includes(key)) {
           data = data.replaceAll(key, value);
           setTimeout(() => {

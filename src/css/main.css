@@ -382,6 +382,10 @@ img.master-badge.node-reappear {
   background-image: url("//www.qq.com/favicon.ico");
 }
 
+.master-of-forums .main-fileboard .fileboard-icon-gtimg {
+  background-image: url("//open.qq.com/favicon.ico");
+}
+
 .master-of-forums .main-fileboard .fileboard-icon-bilibili {
   background-image: url("//www.bilibili.com/favicon.ico");
 }

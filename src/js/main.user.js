@@ -906,7 +906,7 @@ const MASTER_OF_FORUMS = () => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
           if (content.errorNo === '0' && content.url && content.errorMsg === '') {
-            content.url = content.url.includes('?') ? content.url.split('?')[0] : content.url;
+            [content.url] = content.url.split('?');
             GM_setClipboard(content.url, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',

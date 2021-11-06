@@ -208,6 +208,7 @@
 // @connect           googleapis.com
 // @connect           googleusercontent.com
 // @connect           greasyfork.org
+// @connect           gtimg.com
 // @connect           gugudata.com
 // @connect           gv.com
 // @connect           hereapi.com

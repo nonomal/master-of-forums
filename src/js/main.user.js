@@ -3184,16 +3184,6 @@ const MASTER_OF_FORUMS = () => {
     });
   });
 
-  // Show hidden posts
-  for (let i = 0; i <= 1; i++) {
-    // eslint-disable-next-line no-loop-func
-    setTimeout(() => {
-      if (typeof display_blocked_post === 'function' && document.getElementById('hiddenpoststip')) {
-        display_blocked_post();
-      }
-    }, i * 1000);
-  }
-
   // Firefox web browser
   if (USER_AGENT.includes('Firefox')) {
     for (const i of document.getElementsByTagName('img')) {

@@ -833,9 +833,7 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.getThreadID = () => {
     if (typeof MAIN.data?.thread !== 'number') {
       MAIN.data.thread = 1;
-      // eslint-disable-next-line no-undef
       if (typeof tid === 'number' && tid > 0) {
-        // eslint-disable-next-line no-undef
         MAIN.data.thread = tid;
       } else {
         try {
@@ -888,7 +886,6 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToChinaBaidu = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      // eslint-disable-next-line no-undef
       text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{767E}\u{5EA6}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
@@ -968,7 +965,6 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToChinaQQ = (FILE, NODE = 'qq') => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      // eslint-disable-next-line no-undef
       text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
@@ -1046,7 +1042,6 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToChinaGtimg = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      // eslint-disable-next-line no-undef
       text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
@@ -1217,7 +1212,6 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToChinaMuke = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      // eslint-disable-next-line no-undef
       text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{6155}\u{8BFE}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
@@ -1324,7 +1318,6 @@ const MASTER_OF_FORUMS = () => {
             GM_setClipboard(content.data?.link, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              // eslint-disable-next-line no-undef
               text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{56FE}\u{7247}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{56FE}\u{7247}\u{7C7B}\u{578B}：${content.data?.type}\n\u{1F4D6}\u{56FE}\u{7247}\u{5C3A}\u{5BF8}：${content.data?.width} × ${content.data?.height} Pixel\n\u{1F4D6}\u{56FE}\u{7247}\u{4F53}\u{79EF}：${filesize(content.data?.size, { base: 2 })}`,
               image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
@@ -1394,7 +1387,6 @@ const MASTER_OF_FORUMS = () => {
     } else {
       GM_notification({
         title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-        // eslint-disable-next-line no-undef
         text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{8282}\u{70B9}）\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${FILE.name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
         image: GM_getResourceURL('MainICON'),
         timeout: 4 * 1000,
@@ -1501,7 +1493,6 @@ const MASTER_OF_FORUMS = () => {
   MAIN.fn.fileUploadToIPFS = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      // eslint-disable-next-line no-undef
       text: `\u{6587}\u{4EF6}\u{4E0A}\u{4F20}（IPFS）\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${FILE.name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
@@ -1526,7 +1517,6 @@ const MASTER_OF_FORUMS = () => {
             GM_setClipboard(content.url, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              // eslint-disable-next-line no-undef
               text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{6587}\u{4EF6}\u{540D}\u{5B57}：${content.Name}\n\u{6587}\u{4EF6}\u{5927}\u{5C0F}：${filesize(content.Size, { base: 2 })}`,
               image: GM_getResourceURL('MainICON'),
               timeout: 9 * 1000,
@@ -1750,7 +1740,6 @@ const MASTER_OF_FORUMS = () => {
           version: MAIN.version,
         },
         user: {
-          // eslint-disable-next-line camelcase, no-undef
           id: typeof discuz_uid === 'string' ? discuz_uid : '',
           nickname: MAIN.data.nickname,
         },
@@ -2013,7 +2002,6 @@ const MASTER_OF_FORUMS = () => {
   setTimeout(() => {
     // Validate
     if (typeof validate === 'function') {
-      // eslint-disable-next-line no-undef
       MAIN.window.validate = validate;
       unsafeWindow.validate = (...args) => {
         MAIN.fn?.addPatch();
@@ -2023,7 +2011,6 @@ const MASTER_OF_FORUMS = () => {
 
     // Fast post validate
     if (typeof fastpostvalidate === 'function') {
-      // eslint-disable-next-line no-undef
       MAIN.window.fastpostvalidate = fastpostvalidate;
       unsafeWindow.fastpostvalidate = (...args) => {
         MAIN.fn?.addPatch();
@@ -2033,7 +2020,6 @@ const MASTER_OF_FORUMS = () => {
 
     // Check post
     if (typeof checkpost === 'function') {
-      // eslint-disable-next-line no-undef
       MAIN.window.checkpost = checkpost;
       unsafeWindow.checkpost = (...args) => {
         MAIN.fn?.addPatch();
@@ -2082,7 +2068,6 @@ const MASTER_OF_FORUMS = () => {
   setTimeout(() => {
     // Zoom
     if (typeof zoom === 'function') {
-      // eslint-disable-next-line no-undef
       MAIN.window.zoom = zoom;
       // eslint-disable-next-line consistent-return
       unsafeWindow.zoom = (...args) => {
@@ -3203,9 +3188,7 @@ const MASTER_OF_FORUMS = () => {
   for (let i = 0; i <= 1; i++) {
     // eslint-disable-next-line no-loop-func
     setTimeout(() => {
-      // eslint-disable-next-line camelcase
       if (typeof display_blocked_post === 'function' && document.getElementById('hiddenpoststip')) {
-        // eslint-disable-next-line no-undef
         display_blocked_post();
       }
     }, i * 1000);

@@ -436,7 +436,7 @@ const MASTER_OF_FORUMS = () => {
     },
     domains: {},
     fn: {
-      print: (...args) => {
+      print(...args) {
         if (localStorage.mode === 'development') {
           // eslint-disable-next-line no-console
           console.log((Date.now() / 1000).toFixed(3), ...args);

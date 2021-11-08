@@ -175,6 +175,10 @@ form textarea,
   max-height: none !important;
 }
 
+#td_sightml .tedt {
+  width: auto;
+}
+
 code,
 kbd,
 pre,

@@ -577,6 +577,7 @@ img.master-badge.node-reappear {
 .discussion-list-item .discussion-list-item-author .avatar {
   width: 3rem;
   height: 3rem;
+  background-color: var(--main-light);
   border-radius: 50%;
   box-shadow: 0 0 2px var(--main-gray);
   object-fit: contain;

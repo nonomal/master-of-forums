@@ -3062,6 +3062,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{9ED1}\u{793E}\u{4F1A}',
         '\u{9F9F}\u{5934}',
         'Facebook',
+        'GCD',
         'GFW',
         'Twitter',
         'VPN',

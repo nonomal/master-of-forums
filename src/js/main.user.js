@@ -139,6 +139,7 @@
 // @connect           blogspot.comg
 // @connect           boredapi.com
 // @connect           box.com
+// @connect           bspapp.com
 // @connect           buymeacoffee.com
 // @connect           caniuse.com
 // @connect           catfact.ninja

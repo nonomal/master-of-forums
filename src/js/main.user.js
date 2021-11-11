@@ -1996,8 +1996,20 @@ const MASTER_OF_FORUMS = () => {
         MAIN.fn?.buttonSubmit();
       }, false);
     }
+    if (document.getElementById('hiddenpoststip') && typeof display_blocked_post === 'function' && typeof blockedPIDs === 'object') {
+      document.getElementById('hiddenpoststip').addEventListener('click', () => {
+        setTimeout(() => {
+          const FASTRE = document.getElementsByClassName('fastre');
+          for (let i = FASTRE.length - blockedPIDs.length; i < FASTRE.length; i++) {
+            FASTRE[i].addEventListener('click', () => {
+              MAIN.fn?.buttonSubmit();
+            }, false);
+          }
+        }, 1000 / 2);
+      }, false);
+    }
   };
-  setTimeout(MAIN.fn?.buttonFastre, 1000);
+  setTimeout(MAIN.fn?.buttonFastre, 1000 / 2);
 
   // Patch add
   setTimeout(() => {

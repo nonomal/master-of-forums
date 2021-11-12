@@ -147,6 +147,7 @@
 // @connect           cf-ipfs.com
 // @connect           chromium.com
 // @connect           chromium.org
+// @connect           cloudflare-dns.com
 // @connect           cloudflare.com
 // @connect           coinapi.io
 // @connect           coinbase.com

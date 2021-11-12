@@ -387,7 +387,7 @@
 // @connect           zoom.io
 // @connect           zoom.us
 // @run-at            document-start
-// @require           https://cdn.jsdelivr.net/npm/filesize@8/lib/filesize.es6.min.js
+// @require           https://cdn.jsdelivr.net/npm/filesize@8/lib/filesize.es6.js
 // @resource          MainCSS https://github.com/master-of-forums/master-of-forums/raw/main/src/css/main.css
 // @resource          MainICON https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp
 // @grant             GM_info

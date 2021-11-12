@@ -285,6 +285,7 @@
 // @connect           netflix.com
 // @connect           nextdns.com
 // @connect           nextdns.io
+// @connect           notion-static.com
 // @connect           notion.app
 // @connect           notion.com
 // @connect           notion.dev

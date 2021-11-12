@@ -157,6 +157,10 @@
 // @connect           curve.com
 // @connect           datausa.io
 // @connect           debug.com
+// @connect           deno.com
+// @connect           deno.dev
+// @connect           deno.io
+// @connect           deno.land
 // @connect           dev.to
 // @connect           devdocs.io
 // @connect           dianping.com
@@ -312,6 +316,7 @@
 // @connect           redis.com
 // @connect           redis.io
 // @connect           redislabs.com
+// @connect           rust-lang.org
 // @connect           segment.com
 // @connect           shields.io
 // @connect           shodan.com

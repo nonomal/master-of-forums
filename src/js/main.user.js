@@ -404,6 +404,7 @@
 // @connect           yandex.com
 // @connect           youdao.com
 // @connect           youtube.com
+// @connect           yy.com
 // @connect           zhanqi.tv
 // @connect           zhihu.com
 // @connect           zoom.app

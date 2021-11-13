@@ -147,6 +147,7 @@
 // @connect           cf-ipfs.com
 // @connect           chromium.com
 // @connect           chromium.org
+// @connect           cloud.com
 // @connect           cloudflare-dns.com
 // @connect           cloudflare.com
 // @connect           coinapi.io
@@ -175,6 +176,7 @@
 // @connect           dog.ceo
 // @connect           douban.com
 // @connect           dropbox.com
+// @connect           dropboxapi.com
 // @connect           epicgames.com
 // @connect           esm.run
 // @connect           eu.org
@@ -226,6 +228,7 @@
 // @connect           huobi.com
 // @connect           ibm.com
 // @connect           iciba.com
+// @connect           icloud.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
 // @connect           imooc.com
@@ -255,6 +258,7 @@
 // @connect           mdex.com
 // @connect           mdex.io
 // @connect           mdex.me
+// @connect           me.com
 // @connect           meituan.com
 // @connect           meizu.com
 // @connect           meta.app
@@ -363,8 +367,10 @@
 // @connect           userscripts.org
 // @connect           vercel.app
 // @connect           vercel.com
+// @connect           visualstudio.com
 // @connect           vk.com
 // @connect           vscode.dev
+// @connect           weather.com
 // @connect           web.dev
 // @connect           webhose.io
 // @connect           wechat.com

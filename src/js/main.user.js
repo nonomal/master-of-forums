@@ -105,6 +105,7 @@
 // @connect           369369.xyz
 // @connect           58.com
 // @connect           ac.cn
+// @connect           adobe.com
 // @connect           agify.io
 // @connect           aichat.com
 // @connect           aichat.net
@@ -137,11 +138,13 @@
 // @connect           blockchain.com
 // @connect           blogger.com
 // @connect           blogspot.comg
+// @connect           bongacams.com
 // @connect           boredapi.com
 // @connect           box.com
 // @connect           bspapp.com
 // @connect           buymeacoffee.com
 // @connect           caniuse.com
+// @connect           canva.com
 // @connect           catfact.ninja
 // @connect           cdnjs.com
 // @connect           cf-ipfs.com
@@ -175,6 +178,7 @@
 // @connect           docker.io
 // @connect           dog.ceo
 // @connect           douban.com
+// @connect           drive.com
 // @connect           dropbox.com
 // @connect           dropboxapi.com
 // @connect           epicgames.com
@@ -193,6 +197,7 @@
 // @connect           firebaseio.com
 // @connect           fitbit.com
 // @connect           flickr.com
+// @connect           force.com
 // @connect           funtranslations.com
 // @connect           genderize.io
 // @connect           gitbook.com
@@ -233,6 +238,7 @@
 // @connect           imgurl.org
 // @connect           imooc.com
 // @connect           infura.io
+// @connect           instagram.com
 // @connect           ipfs.com
 // @connect           ipfs.io
 // @connect           ipify.org
@@ -277,6 +283,7 @@
 // @connect           metamask.io
 // @connect           mi.com
 // @connect           microsoft.com
+// @connect           microsoftonline.com
 // @connect           microsofttranslator.com
 // @connect           mongodb.com
 // @connect           mozilla.org
@@ -287,6 +294,7 @@
 // @connect           myqcloud.com
 // @connect           namesilo.com
 // @connect           nationalize.io
+// @connect           naver.com
 // @connect           netflix.com
 // @connect           nextdns.com
 // @connect           nextdns.io
@@ -297,11 +305,15 @@
 // @connect           notion.io
 // @connect           notion.site
 // @connect           notion.so
+// @connect           office.com
+// @connect           office365.com
+// @connect           onedrive.com
 // @connect           openlayers.org
 // @connect           openstreetmap.org
 // @connect           openuserjs.org
 // @connect           openuserts.org
 // @connect           pages.dev
+// @connect           panda.tv
 // @connect           pastebin.com
 // @connect           paypal.com
 // @connect           peopledatalabs.com
@@ -325,9 +337,11 @@
 // @connect           redislabs.com
 // @connect           rust-lang.org
 // @connect           segment.com
+// @connect           sharepoint.com
 // @connect           shields.io
 // @connect           shodan.com
 // @connect           shodan.io
+// @connect           shopify.com
 // @connect           showapi.com
 // @connect           signal.org
 // @connect           similarweb.com
@@ -350,6 +364,7 @@
 // @connect           tencent.com
 // @connect           tencentcloudapi.com
 // @connect           tianyancha.com
+// @connect           tmall.com
 // @connect           tokenlon.com
 // @connect           tokenlon.im
 // @connect           tokenlon.io
@@ -361,6 +376,7 @@
 // @connect           tuchong.com
 // @connect           tumblr.com
 // @connect           tutanota.com
+// @connect           twitch.tv
 // @connect           twitter.com
 // @connect           typeform.com
 // @connect           uniswap.org
@@ -388,6 +404,7 @@
 // @connect           yandex.com
 // @connect           youdao.com
 // @connect           youtube.com
+// @connect           zhanqi.tv
 // @connect           zhihu.com
 // @connect           zoom.app
 // @connect           zoom.com

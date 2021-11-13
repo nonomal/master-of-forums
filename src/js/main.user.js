@@ -306,6 +306,7 @@
 // @connect           paypal.com
 // @connect           peopledatalabs.com
 // @connect           pinduoduo.com
+// @connect           plex.tv
 // @connect           protonmail.com
 // @connect           publicapis.org
 // @connect           qiniu.com

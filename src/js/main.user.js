@@ -148,10 +148,12 @@
 // @connect           catfact.ninja
 // @connect           cdnjs.com
 // @connect           cf-ipfs.com
+// @connect           chat.com
 // @connect           chromium.com
 // @connect           chromium.org
 // @connect           cloud.com
 // @connect           cloudflare-dns.com
+// @connect           cloudflare-ipfs.com
 // @connect           cloudflare.com
 // @connect           coinapi.io
 // @connect           coinbase.com
@@ -181,6 +183,7 @@
 // @connect           drive.com
 // @connect           dropbox.com
 // @connect           dropboxapi.com
+// @connect           dweb.link
 // @connect           epicgames.com
 // @connect           esm.run
 // @connect           eu.org
@@ -255,6 +258,7 @@
 // @connect           ledger.com
 // @connect           like.com
 // @connect           linode.com
+// @connect           livechat.com
 // @connect           lunarcrush.com
 // @connect           mail.com
 // @connect           maoyan.com
@@ -326,6 +330,7 @@
 // @connect           qq.com
 // @connect           querydata.org
 // @connect           quran.com
+// @connect           qweather.com
 // @connect           radar.io
 // @connect           random.org
 // @connect           randomuser.me
@@ -364,6 +369,7 @@
 // @connect           tencent.com
 // @connect           tencentcloudapi.com
 // @connect           tianyancha.com
+// @connect           tinder.com
 // @connect           tmall.com
 // @connect           tokenlon.com
 // @connect           tokenlon.im
@@ -407,6 +413,7 @@
 // @connect           yy.com
 // @connect           zhanqi.tv
 // @connect           zhihu.com
+// @connect           zoho.com
 // @connect           zoom.app
 // @connect           zoom.com
 // @connect           zoom.dev

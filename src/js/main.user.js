@@ -2159,7 +2159,7 @@ const MASTER_OF_FORUMS = () => {
                 discussionData += `<div class="discussion-list-item${i.discussionId === MAIN.data?.thread ? ' active' : ''}">
                   <div class="discussion-list-item-author">
                     <a class="discussion-list-item-author-avatar" href="space-uid-${i.userId}.html" target="_blank">
-                      <img class="avatar" src="${i.userId === 0 ? '//www.similarweb.com/images/flags-svg/flag-icon-xx.svg' : `uc_server/avatar.php?uid=${i.userId}&amp;size=small`}" loading="lazy" referrerpolicy="no-referrer" draggable="false">
+                      <img class="avatar" src="${i.userId === 0 ? '//www.similarweb.com/images/flags-svg/flag-icon-xx.svg' : `uc_server/avatar.php?uid=${i.userId}&amp;size=small`}" loading="lazy" referrerpolicy="no-referrer" draggable="false" onerror="this.src='//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/hsts-pixel.gif';">
                     </a>
                   </div>
                   <div class="discussion-list-item-content">

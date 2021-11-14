@@ -2647,8 +2647,8 @@ const MASTER_OF_FORUMS = () => {
   };
 
   MAIN.domains.ωωω_hostloc_com = () => {
+    MAIN.fn?.drawer();
     if (PATHNAME.includes('/thread-') || HREF.includes('/forum.php?mod=viewthread&tid=')) {
-      MAIN.fn?.drawer();
       setTimeout(() => {
         const MESSAGE_TEXT = document.getElementById('messagetext');
         if (MESSAGE_TEXT) {

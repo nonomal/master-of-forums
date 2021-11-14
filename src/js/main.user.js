@@ -1682,7 +1682,7 @@ const MASTER_OF_FORUMS = () => {
           const TIPS_HEIGHT = 24;
           const {
             NODE_X, NODE_Y, NODE_WIDTH, NODE_HEIGHT,
-          } = MAIN.fn?.getNodeCoordinate(n);
+          } = MAIN.fn.getNodeCoordinate(n);
           const NODE_CENTER_X = NODE_X + NODE_WIDTH / 2;
           const NODE_CENTER_Y = NODE_Y + NODE_HEIGHT / 2;
           MAIN.tips.main.style.height = `${TIPS_HEIGHT}px`;
@@ -1980,7 +1980,7 @@ const MASTER_OF_FORUMS = () => {
 
   // Patch functions
   MAIN.fn.addPatch = () => {
-    if (typeof MAIN.can?.addPatchTimestamp === 'number' && Date.now() - MAIN.can?.addPatchTimestamp < 1000) {
+    if (typeof MAIN.can?.addPatchTimestamp === 'number' && Date.now() - MAIN.can.addPatchTimestamp < 1000) {
       return false;
     }
     MAIN.can.removePatch = false;
@@ -2139,7 +2139,7 @@ const MASTER_OF_FORUMS = () => {
     `);
     MAIN.fn?.getThreadID();
     document.getElementById('discussion').addEventListener('mouseenter', (event) => {
-      if (typeof MAIN.can?.drawerDataCacheTime === 'undefined' || Date.now() - MAIN.can?.drawerDataCacheTime > 30 * 1000) {
+      if (typeof MAIN.can?.drawerDataCacheTime === 'undefined' || Date.now() - MAIN.can.drawerDataCacheTime > 30 * 1000) {
         MAIN.can.drawerDataCacheTime = Date.now();
         document.getElementById('discussion-list').innerHTML = '';
         event.target.classList.add('loading');
@@ -2155,7 +2155,7 @@ const MASTER_OF_FORUMS = () => {
             if (response.readyState === 4 && response.status === 200) {
               const DATA = JSON.parse(response.responseText);
               let discussionData = '';
-              for (const i of DATA.data?.items) {
+              for (const i of DATA.data.items) {
                 discussionData += `<div class="discussion-list-item${i.discussionId === MAIN.data?.thread ? ' active' : ''}">
                   <div class="discussion-list-item-author">
                     <a class="discussion-list-item-author-avatar" href="space-uid-${i.userId}.html" target="_blank">

@@ -148,6 +148,7 @@
 // @connect           catfact.ninja
 // @connect           cdnjs.com
 // @connect           cf-ipfs.com
+// @connect           chain.com
 // @connect           chat.com
 // @connect           chromium.com
 // @connect           chromium.org
@@ -313,6 +314,7 @@
 // @connect           office365.com
 // @connect           onedrive.com
 // @connect           openlayers.org
+// @connect           openshift.com
 // @connect           openstreetmap.org
 // @connect           openuserjs.org
 // @connect           openuserts.org
@@ -332,6 +334,7 @@
 // @connect           quran.com
 // @connect           qweather.com
 // @connect           radar.io
+// @connect           rancher.com
 // @connect           random.org
 // @connect           randomuser.me
 // @connect           readme.com
@@ -2662,7 +2665,7 @@ const MASTER_OF_FORUMS = () => {
         if (document.getElementById('messagelogin') && Math.random() < 0.01) {
           MESSAGE_TEXT.innerHTML += '\n<p style="padding-top: 1rem;"><span class="main-flash">\u{1F916}</span>&nbsp;<a href="//github.com/master-of-forums/master-of-forums/search?q=\u{45}\u{2D}\u{4D}\u{61}\u{69}\u{6C}" rel="external nofollow noopener" target="_blank">\u{7ED9}\u{6211}\u{6765}\u{4FE1}</a>（<span style="color: var(--main-gray);">\u{6CE8}\u{660E}\u{8BBA}\u{575B}</span>）\u{5C06}\u{6709}\u{53EF}\u{80FD}<span style="color: var(--main-red);">\u{0032}\u{0034}\u{5C0F}\u{65F6}</span>\u{5185}\u{6536}\u{5230}\u{8BBA}\u{575B}<span style="color: var(--main-green);">\u{9080}\u{8BF7}\u{7801}</span>（<img style="position: relative; top: 2px; width: 1rem; height: 1rem;" src="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp" loading="lazy" referrerpolicy="no-referrer" draggable="false"><a href="https://github.com/master-of-forums/master-of-forums" rel="external nofollow noopener" target="_blank"><span style="color: var(--main-gray);">\u{8BBA}\u{575B}\u{5927}\u{5E08}</span></a>）</p>';
         }
-      }, 100);
+      }, 1000 / 10);
     } else if (PATHNAME.includes('/space-uid-') || PATHNAME.includes('/space-username-') || HREF.includes('/home.php?mod=space')) {
       const DIY_STYLE = document.getElementById('diy_style');
       if (DIY_STYLE) {

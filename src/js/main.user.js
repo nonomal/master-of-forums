@@ -2208,7 +2208,7 @@ const MASTER_OF_FORUMS = () => {
     // }, false);
 
     // Drawer Guide
-    if (PATHNAME === '/' || document.getElementById('messagetext')) {
+    if (PATHNAME === '/' || PATHNAME.startsWith('/forum-') || document.getElementById('messagetext')) {
       const DRAWER_GUIDE = document.createElement('span');
       DRAWER_GUIDE.className = 'drawer-guide';
       DRAWER_GUIDE.innerHTML = '\u{1F448}';

@@ -2834,6 +2834,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{53CD}\u{4E2D}',
         '\u{53CD}\u{4EBA}\u{7C7B}',
         '\u{53CD}\u{515A}',
+        '\u{53CD}\u{52A8}',
         '\u{53CD}\u{534E}',
         '\u{53CD}\u{653F}\u{5E9C}',
         '\u{53CD}\u{793E}\u{4F1A}',

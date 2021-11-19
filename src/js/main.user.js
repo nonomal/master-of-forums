@@ -488,7 +488,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211111,
+    version: 20211119,
     window: {},
   };
 
@@ -545,7 +545,14 @@ const MASTER_OF_FORUMS = () => {
         MAIN.fn?.fileUploadToChinaBaidu(FILE);
       }
     } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
+      if (error.message.includes('Failed to execute \'showOpenFilePicker\' on \'Window\'')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{8BF7}\u{5148}\u{70B9}\u{51FB}\u{4E00}\u{4E0B}\u{9875}\u{9762}\u{4E4B}\u{540E}\u{518D}\u{4F7F}\u{7528}\u{4E0A}\u{4F20}\u{529F}\u{80FD}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else if (error.message.includes('The user aborted a request')) {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
@@ -593,7 +600,14 @@ const MASTER_OF_FORUMS = () => {
         MAIN.fn?.fileUploadToChinaQQ(FILE);
       }
     } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
+      if (error.message.includes('Failed to execute \'showOpenFilePicker\' on \'Window\'')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{8BF7}\u{5148}\u{70B9}\u{51FB}\u{4E00}\u{4E0B}\u{9875}\u{9762}\u{4E4B}\u{540E}\u{518D}\u{4F7F}\u{7528}\u{4E0A}\u{4F20}\u{529F}\u{80FD}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else if (error.message.includes('The user aborted a request')) {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
@@ -641,7 +655,14 @@ const MASTER_OF_FORUMS = () => {
         MAIN.fn?.fileUploadToUS(FILE);
       }
     } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
+      if (error.message.includes('Failed to execute \'showOpenFilePicker\' on \'Window\'')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{8BF7}\u{5148}\u{70B9}\u{51FB}\u{4E00}\u{4E0B}\u{9875}\u{9762}\u{4E4B}\u{540E}\u{518D}\u{4F7F}\u{7528}\u{4E0A}\u{4F20}\u{529F}\u{80FD}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else if (error.message.includes('The user aborted a request')) {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
@@ -701,7 +722,14 @@ const MASTER_OF_FORUMS = () => {
         MAIN.fn?.fileUploadToGlobal(FILE);
       }
     } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
+      if (error.message.includes('Failed to execute \'showOpenFilePicker\' on \'Window\'')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{8BF7}\u{5148}\u{70B9}\u{51FB}\u{4E00}\u{4E0B}\u{9875}\u{9762}\u{4E4B}\u{540E}\u{518D}\u{4F7F}\u{7528}\u{4E0A}\u{4F20}\u{529F}\u{80FD}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else if (error.message.includes('The user aborted a request')) {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
@@ -761,7 +789,14 @@ const MASTER_OF_FORUMS = () => {
         MAIN.fn?.fileUploadToIPFS(FILE);
       }
     } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
+      if (error.message.includes('Failed to execute \'showOpenFilePicker\' on \'Window\'')) {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{8BF7}\u{5148}\u{70B9}\u{51FB}\u{4E00}\u{4E0B}\u{9875}\u{9762}\u{4E4B}\u{540E}\u{518D}\u{4F7F}\u{7528}\u{4E0A}\u{4F20}\u{529F}\u{80FD}\u{FF01}',
+          image: GM_getResourceURL('MainICON'),
+          timeout: 4 * 1000,
+        });
+      } else if (error.message.includes('The user aborted a request')) {
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
           text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',

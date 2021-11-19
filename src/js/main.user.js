@@ -584,7 +584,7 @@ const MASTER_OF_FORUMS = () => {
         types: [{
           description: 'Images',
           accept: {
-            'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
+            'image/*': ['.png', '.gif', '.jpeg', '.jpg', '.webp'],
           },
         }],
       });
@@ -619,54 +619,6 @@ const MASTER_OF_FORUMS = () => {
     MAIN.tips.fileboard.style.display = 'block';
     MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-gtimg', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
     MAIN.tips.fileboardIcon.classList.add('fileboard-icon-qq');
-  });
-
-  // Picture host - China gtimg.com
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}';
-  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
-    MAIN.tips.fileboard.style.display = 'none';
-    try {
-      const [fileHandle] = await unsafeWindow.showOpenFilePicker({
-        multiple: false,
-        excludeAcceptAllOption: true,
-        types: [{
-          description: 'Images',
-          accept: {
-            'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
-          },
-        }],
-      });
-      if (fileHandle) {
-        const FILE = await fileHandle.getFile();
-        MAIN.fn?.fileUploadToChinaGtimg(FILE);
-      }
-    } catch (error) {
-      if (error.message.includes('The user aborted a request')) {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{6CA1}\u{6709}\u{6587}\u{4EF6}\u{2753}',
-          image: GM_getResourceURL('MainICON'),
-          timeout: 4 * 1000,
-        });
-      } else {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{60A8}\u{7684}\u{6D4F}\u{89C8}\u{5668}\u{4E0D}\u{652F}\u{6301}\u{6587}\u{4EF6}\u{4E0A}\u{4F20}\u{2757}',
-          image: GM_getResourceURL('MainICON'),
-          timeout: 4 * 1000,
-        });
-      }
-    }
-  });
-
-  // Picture host - China gtimg.com (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F306} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}\u{30FB}${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
-  GM_registerMenuCommand(MONKEY_MENU.name, async () => {
-    MAIN.can.pasteUpload = true;
-    MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToChinaGtimg;
-    MAIN.tips.fileboard.style.display = 'block';
-    MAIN.tips.fileboardIcon.classList.remove('fileboard-icon-default', 'fileboard-icon-ipfs', 'fileboard-icon-imgur', 'fileboard-icon-alibabacloud', 'fileboard-icon-baidu', 'fileboard-icon-qq', 'fileboard-icon-gtimg', 'fileboard-icon-bilibili', 'fileboard-icon-suning', 'fileboard-icon-muke');
-    MAIN.tips.fileboardIcon.classList.add('fileboard-icon-gtimg');
   });
 
   // Picture host - United States
@@ -1005,87 +957,10 @@ const MASTER_OF_FORUMS = () => {
     });
   };
 
-  MAIN.fn.fileUploadToChinaQQ = (FILE, NODE = 'qq') => {
+  MAIN.fn.fileUploadToChinaQQ = (FILE) => {
     GM_notification({
       title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
       text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{817E}\u{8BAF}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
-      image: GM_getResourceURL('MainICON'),
-      timeout: 4 * 1000,
-    });
-
-    const fileData = new FormData();
-    fileData.append('image', FILE);
-
-    GM_xmlhttpRequest({
-      method: 'POST',
-      url: `https://${atob('aW1hZ2Uua2llbmcuY24=')}/upload.html?type=${NODE}`,
-      data: fileData,
-      timeout: 10 * 1000,
-      onload: (response) => {
-        if (response.readyState === 4 && response.status === 200) {
-          const content = JSON.parse(response.responseText);
-          if (content.code === 200 && content.msg && content.data?.url) {
-            GM_setClipboard(content.data?.url, 'text');
-            GM_notification({
-              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: '\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}',
-              image: GM_getResourceURL('MainICON'),
-              timeout: 9 * 1000,
-              onclick: () => {
-                GM_openInTab(content.data?.url, {
-                  active: true,
-                });
-              },
-            });
-            // Append to Textarea
-            MAIN.fn?.fileUploadAppendToTextarea(content.data?.url);
-          } else if (typeof content.code === 'number' && content.msg && content.msg.includes('admin') === false && content.msg.includes('kieng') === false) {
-            GM_notification({
-              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: `\u{1F50A}${content.msg}`,
-              image: GM_getResourceURL('MainICON'),
-              timeout: 9 * 1000,
-            });
-          } else {
-            GM_notification({
-              title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-              image: GM_getResourceURL('MainICON'),
-              timeout: 4 * 1000,
-            });
-          }
-        } else {
-          GM_notification({
-            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-            text: '\u{274C}\u{4E0A}\u{4F20}\u{5931}\u{8D25}\u{FF01}',
-            image: GM_getResourceURL('MainICON'),
-            timeout: 4 * 1000,
-          });
-        }
-      },
-      onerror: () => {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{274C}\u{4E0A}\u{4F20}\u{9519}\u{8BEF}\u{FF01}',
-          image: GM_getResourceURL('MainICON'),
-          timeout: 4 * 1000,
-        });
-      },
-      ontimeout: () => {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{274C}\u{4E0A}\u{4F20}\u{8D85}\u{65F6}\u{FF01}',
-          image: GM_getResourceURL('MainICON'),
-          timeout: 4 * 1000,
-        });
-      },
-    });
-  };
-
-  MAIN.fn.fileUploadToChinaGtimg = (FILE) => {
-    GM_notification({
-      title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-      text: `\u{56FE}\u{7247}\u{4E0A}\u{4F20}（\u{4E2D}\u{56FD}\u{30FB}\u{6781}\u{56FE}）\n\u{56FE}\u{7247}\u{540D}\u{5B57}：${FILE.name}\n\u{56FE}\u{7247}\u{5927}\u{5C0F}：${filesize(FILE.size, { base: 2 })}`,
       image: GM_getResourceURL('MainICON'),
       timeout: 4 * 1000,
     });

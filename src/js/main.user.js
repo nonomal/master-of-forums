@@ -303,6 +303,8 @@
 // @connect           netflix.com
 // @connect           nextdns.com
 // @connect           nextdns.io
+// @connect           ngrok.com
+// @connect           ngrok.io
 // @connect           notion-static.com
 // @connect           notion.app
 // @connect           notion.com
@@ -507,7 +509,6 @@ const MASTER_OF_FORUMS = () => {
   const HREF = window.location.href;
   const PATHNAME = window.location.pathname;
   const SEARCH_PARAMS = (new URL(document.location)).searchParams;
-  const REFERRER = document.referrer;
 
   // Monkey Menu
   const MONKEY_MENU = {};

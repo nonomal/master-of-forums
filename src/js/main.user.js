@@ -416,6 +416,7 @@
 // @connect           youdao.com
 // @connect           youtube.com
 // @connect           yy.com
+// @connect           zerotier.com
 // @connect           zhanqi.tv
 // @connect           zhihu.com
 // @connect           zoho.com

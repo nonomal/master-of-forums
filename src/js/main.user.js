@@ -491,7 +491,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211119,
+    version: 20211122,
     window: {},
   };
 

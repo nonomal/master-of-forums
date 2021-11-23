@@ -224,7 +224,7 @@ img.master-badge {
   user-select: none;
   border: none;
   box-shadow: none;
-  opacity: 50%;
+  opacity: 0.5;
   transition: opacity 1s;
   -webkit-user-drag: none;
 }
@@ -236,7 +236,7 @@ img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/
 img.master-badge:hover {
   filter: drop-shadow(0 0 2px #fff);
   box-shadow: none;
-  opacity: 100%;
+  opacity: 1;
 }
 
 /* Flash */
@@ -244,12 +244,12 @@ img.master-badge:hover {
   from,
   50%,
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 
   25%,
   75% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -269,8 +269,8 @@ img.master-badge.node-reappear {
 
 /* Textarea */
 @keyframes et {
-  from { opacity: 0%; }
-  to { opacity: 100%; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 #e_textarea {
@@ -291,7 +291,7 @@ img.master-badge.node-reappear {
   text-shadow: 0 0 1rem rgb(255 255 255 / 50%);
   touch-action: none;
   user-select: none;
-  opacity: 100%;
+  opacity: 1;
   transition: none;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
@@ -471,7 +471,7 @@ img.master-badge.node-reappear {
   background-color: rgb(255 255 255 / 50%);
   border-radius: 50%;
   box-shadow: inset 0 0 1rem var(--main-gray);
-  opacity: 50%;
+  opacity: 0.5;
   backdrop-filter: blur(0.25rem);
   -webkit-user-drag: none;
 }
@@ -512,7 +512,7 @@ img.master-badge.node-reappear {
   overflow-y: scroll;
   user-select: none;
   background-color: rgb(240 240 240 / 50%);
-  opacity: 0%;
+  opacity: 0;
   transition: transform 0.5s linear, opacity 0s 0.5s;
   transform: translateX(-40rem);
   backdrop-filter: blur(0.25rem);
@@ -520,7 +520,7 @@ img.master-badge.node-reappear {
 }
 
 .master-of-forums .discussion:hover {
-  opacity: 100%;
+  opacity: 1;
   transition: transform 0.5s linear;
   transform: translateX(0);
 }
@@ -625,6 +625,7 @@ img.master-badge.node-reappear {
 }
 
 .discussion-list-item-content .content-title a {
+  color: var(--main-dark);
   -webkit-user-drag: none;
 }
 
@@ -688,19 +689,19 @@ img.master-badge.node-reappear {
 @keyframes drawer-guide-move {
   from {
     left: 4rem;
-    opacity: 0%;
+    opacity: 0;
   }
 
   to {
     left: 0;
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
 .master-of-forums .drawer-guide {
   position: fixed;
   z-index: -1;
-  opacity: 0%;
+  opacity: 0;
   animation: drawer-guide-move 1s 4;
 }
 

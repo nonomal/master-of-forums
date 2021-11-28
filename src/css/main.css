@@ -270,11 +270,12 @@ img.master-badge.node-reappear {
 /* Textarea */
 @keyframes et {
   from { opacity: 0; }
+  50% { opacity: 0; }
   to { opacity: 1; }
 }
 
 #e_textarea {
-  animation: et 3s;
+  animation: et 2s;
 }
 
 /* Main tip */

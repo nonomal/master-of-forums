@@ -491,7 +491,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211122,
+    version: 20211127,
     window: {},
   };
 
@@ -1996,15 +1996,15 @@ const MASTER_OF_FORUMS = () => {
   }, 1000);
 
   // Patch remove
-  if (HREF.includes('&action=edit&')) {
+  if (SEARCH_PARAMS.get('action') === 'edit') {
     MAIN.fn?.removePatch();
     MAIN.can.removePatch = true;
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
       setTimeout(() => {
         if (MAIN.can?.removePatch) {
           MAIN.fn?.removePatch();
         }
-      }, i * 100);
+      }, i * 123);
     }
   }
 

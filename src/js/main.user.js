@@ -491,7 +491,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211127,
+    version: 20211130,
     window: {},
   };
 
@@ -3030,6 +3030,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{9EBB}\u{9189}',
         '\u{9ED1}\u{624B}\u{515A}',
         '\u{9ED1}\u{793E}\u{4F1A}',
+        '\u{9ED1}\u{8F66}',
         '\u{9F9F}\u{5934}',
         'Facebook',
         'GCD',

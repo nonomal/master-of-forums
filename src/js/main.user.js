@@ -491,7 +491,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211130,
+    version: 20211201,
     window: {},
   };
 
@@ -514,13 +514,13 @@ const MASTER_OF_FORUMS = () => {
   // Monkey Menu
   const MONKEY_MENU = {};
 
-  MONKEY_MENU.name = `\u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name}\u{30FB}\u{4E3B}\u{9875}（${MAIN.channel}）`;
+  MONKEY_MENU.name = `\u{1F916} \u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name}\u{30FB}\u{4E3B}\u{9875}（${MAIN.channel}）`;
   GM_registerMenuCommand(MONKEY_MENU.name, () => {
     GM_openInTab(GM_info.script?.homepage, {
       active: true,
     });
   });
-  MONKEY_MENU.name = `\u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name}\u{30FB}\u{4ED3}\u{5E93}（${MAIN.channel}）`;
+  MONKEY_MENU.name = `\u{1F916} \u{1F310} ${'\u{8BBA}\u{575B}\u{5927}\u{5E08}' || GM_info.script?.name}\u{30FB}\u{4ED3}\u{5E93}（${MAIN.channel}）`;
   GM_registerMenuCommand(MONKEY_MENU.name, () => {
     GM_openInTab(MAIN.repository, {
       active: true,
@@ -2586,7 +2586,7 @@ const MASTER_OF_FORUMS = () => {
     }
 
     // Check-in
-    MONKEY_MENU.name = '\u{1F993} \u{4E3B}\u{673A}\u{8BBA}\u{575B} \u{1F31E} \u{7528}\u{6237}\u{7B7E}\u{5230}';
+    MONKEY_MENU.name = '\u{1F993} \u{1F31E} \u{4E3B}\u{673A}\u{8BBA}\u{575B}\u{30FB}\u{7528}\u{6237}\u{7B7E}\u{5230}';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
       if (typeof MAIN.can?.checkIn === 'undefined') {
         MAIN.can.checkIn = false;

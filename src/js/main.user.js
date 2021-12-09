@@ -399,6 +399,7 @@
 // @connect           vk.com
 // @connect           vscode.dev
 // @connect           weather.com
+// @connect           web.app
 // @connect           web.dev
 // @connect           webhose.io
 // @connect           wechat.com

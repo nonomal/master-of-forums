@@ -7,7 +7,7 @@
 // @name:zh-MO        論壇大師
 // @name:zh-TW        論壇大師
 // @namespace         MASTER-OF-FORUMS
-// @version           0.0.1
+// @version           1.0.0
 // @author            admin
 // @description       Beautify the interface, Remove ads, Enhance functions.
 // @description:en    Beautify the interface, Remove ads, Enhance functions.
@@ -492,7 +492,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20211220,
+    version: 20220224,
     window: {},
   };
 
@@ -2563,7 +2563,9 @@ const MASTER_OF_FORUMS = () => {
   };
 
   MAIN.domains.ωωω_hostloc_com = () => {
-    MAIN.fn?.drawer();
+    setTimeout(() => {
+      MAIN.fn?.drawer();
+    }, 1000 / 2);
     if (PATHNAME.includes('/thread-') || HREF.includes('/forum.php?mod=viewthread&tid=')) {
       setTimeout(() => {
         const MESSAGE_TEXT = document.getElementById('messagetext');
